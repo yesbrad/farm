@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106da8017b8a94cff8f84e1f8a46c1e5, type: 3}
+  m_Name: Weed
+  m_EditorClassIdentifier: 
+  name: Weed
+  id: crop_weed
+  isKeyItem: 0
+  icon: {fileID: 21300002, guid: 4f0080508a3514ca98d9883be198489c, type: 3}
+  lifeStages:
+  - name: Young
+    lifeTime: 10
+    stageTile: {fileID: 11400000, guid: 42052ec01ec4c4b8aa4e3088179bd2b4, type: 2}
+    isAdult: 0
+  - name: Teen
+    lifeTime: 10
+    stageTile: {fileID: 11400000, guid: bac7cd1c007014999af2edfaa394bdf1, type: 2}
+    isAdult: 0
+  - name: Adult
+    lifeTime: 20
+    stageTile: {fileID: 11400000, guid: ad279d42de5674a3f97fa20192d77880, type: 2}
+    isAdult: 1
+  - name: Dead
+    lifeTime: 20
+    stageTile: {fileID: 11400000, guid: e172173a8596d4a9489c9dc6aca9c84f, type: 2}
+    isAdult: 0
+  harvestItem: {fileID: 11400000}
+  minDropAmount: 2
+  maxDropAmount: 5
+  failedItem: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
