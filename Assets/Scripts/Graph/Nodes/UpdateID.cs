@@ -10,7 +10,7 @@ public class UpdateID : OceanNode
 
 	public override void Use()
 	{
-        GameManager.CurrentID = newId;        
+        SaveManager.CurrentID = newId;        
         NextNode();
     }
 

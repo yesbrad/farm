@@ -17,7 +17,7 @@ public class UI_SOR : Panel
     public void ContinueGame ()
     {
         GameManager.instance.ChangeState(GameState.Game);
-        GameManager.instance.Load();
+        SaveManager.Load();
     }
 
     public void NewGame ()

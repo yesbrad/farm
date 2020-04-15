@@ -9,7 +9,7 @@ public class SaveNode : OceanNode
 	public override void Use()
 	{
         base.Use();
-        GameManager.instance.Save();
+        SaveManager.Save();
         NextNode();
     }
 

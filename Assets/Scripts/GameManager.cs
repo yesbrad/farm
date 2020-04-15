@@ -30,34 +30,20 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentState { get { return currentState; }}
 
-    public static EventIDs CurrentID
-    {
-        get 
-        { 
-            if(string.IsNullOrEmpty(PlayerPrefs.GetString(StaticStrings.CurrentID)))
-                PlayerPrefs.SetString(StaticStrings.CurrentID, EventIDs.ZWelcome.ToString());
-
-            return (EventIDs)System.Enum.Parse(typeof(EventIDs), PlayerPrefs.GetString(StaticStrings.CurrentID)); 
-        }
-
-        set { PlayerPrefs.SetString(StaticStrings.CurrentID, value.ToString()); }
-    }
-
     private void Awake()
 	{   
         instance = this;
 
         InitTilemaps();
-
-            //CurrentID = EventIDs.ZWelcome;
 	}
 
 	private void Start()
 	{
         ChangeState(defaultState);
 
+        // Load the default save
         if (defaultState == GameState.Game)
-            Load();
+            SaveManager.Load();
 	}
 
 	public void ChangeState (GameState _state)
@@ -85,23 +71,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame ()
     {
-		SaveData.NewGame();
+		SaveManager.NewGame();
         ChangeState(GameState.Game);
-    }
-
-    public void Save ()
-    {
-        Debug.Log("Game has been Saved!");
-        CropManager.instance.Save();
-        Inventory.instance.Save();
-        PlayerController.instance.Save();
-    }
-
-    public void Load()
-    {
-        Debug.Log("Game has been Loaded!");
-        CropManager.instance.Load();
-        Inventory.instance.Load();
-        PlayerController.instance.Load();
     }
 }

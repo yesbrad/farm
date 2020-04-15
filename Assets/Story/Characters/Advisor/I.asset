@@ -35,9 +35,6 @@ MonoBehaviour:
   - {fileID: 114311292261246346}
   - {fileID: 114740704342240068}
   - {fileID: 114600995516236432}
-  - {fileID: 114027541751425834}
-  - {fileID: 114060620815121288}
-  - {fileID: 114233668733512712}
 --- !u!114 &114013708277594018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +92,8 @@ MonoBehaviour:
     ...
 
 
-    Oh no..
+    Oh
+    no..
 
 
     We must be quick!
@@ -104,7 +102,8 @@ MonoBehaviour:
     Take these seed and plant!
 
 
-    Hurry. I''m afraid I can''t do it my self.
+    Hurry. I''m
+    afraid I can''t do it my self.
 
 
     So you must..
@@ -113,55 +112,10 @@ MonoBehaviour:
     Go quick.
 
 
-    And dont cone back until you have ''30'' wheat.
+    And
+    dont cone back until you have ''30'' wheat.
 
 '
---- !u!114 &114027541751425834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
-  m_Name: Toggle Player
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 488, y: 1016}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114027541751425834}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: outputFalse
-        node: {fileID: 114063615107035266}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114027541751425834}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114060620815121288}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  lockPlayer: 1
 --- !u!114 &114043078931168460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,52 +162,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   newId: 2
---- !u!114 &114060620815121288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 712, y: 1016}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114060620815121288}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114027541751425834}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114060620815121288}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114233668733512712}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: Yoo bitxhesss
 --- !u!114 &114063615107035266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +212,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114027541751425834}
+        node: {fileID: 114869904376511394}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -475,7 +383,7 @@ MonoBehaviour:
   m_Name: Simple Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 200, y: 888}
+  position: {x: 216, y: 808}
   ports:
     keys:
     - input
@@ -504,50 +412,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  message: Yeah Boy! It's working!
---- !u!114 &114233668733512712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
-  m_Name: Toggle Player
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1093.9231, y: 1125.3424}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114233668733512712}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114060620815121288}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114233668733512712}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  lockPlayer: 0
+  message: Ah You got the wheat Keep planting!
 --- !u!114 &114236812261492308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1020,7 @@ MonoBehaviour:
   m_Name: Simple Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 376, y: 1256}
+  position: {x: 216, y: 1080}
   ports:
     keys:
     - input
@@ -1165,7 +1030,10 @@ MonoBehaviour:
       _node: {fileID: 114869904376511394}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: outputFalse
+        node: {fileID: 114063615107035266}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
@@ -1181,7 +1049,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  message: 'Don''t ever do that again do you here me! '
+  message: You must come back with 30 wheat!
 --- !u!114 &114919751080390652
 MonoBehaviour:
   m_ObjectHideFlags: 0

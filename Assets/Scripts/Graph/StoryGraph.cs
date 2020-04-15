@@ -28,7 +28,7 @@ public class StoryGraph : NodeGraph
 
         for (int z = 0; z < startNodes.Count; z++)
         {
-            if (startNodes[z].eventIDs == GameManager.CurrentID)
+            if (startNodes[z].eventIDs == SaveManager.CurrentID)
             {
                 startNodes[z].Use();
                 return;
