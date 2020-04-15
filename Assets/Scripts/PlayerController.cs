@@ -94,18 +94,13 @@ public class PlayerController : MonoBehaviour
 
 	public void SetAni (string dir)
 	{
-		//animator.SetBool("Up" , dir == "Up");
-		//animator.SetBool("Down" , dir == "Down");
-		//animator.SetBool("Left" , dir == "Left");
-		//animator.SetBool("Right" , dir == "Right");
-
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
+        animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
 	}
 
 	public bool CanMove(Vector3 _direction)
 	{
-        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1 , 1 << LayerMask.NameToLayer("Default"));
+        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1);
 	}
 
 
