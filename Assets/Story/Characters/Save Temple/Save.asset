@@ -15,67 +15,14 @@ MonoBehaviour:
   nodes:
   - {fileID: 114856732567356424}
   - {fileID: 114549378934683340}
-  - {fileID: 114145555990223964}
   - {fileID: 114991411926961130}
   - {fileID: 114752680757416700}
-  - {fileID: 114249187821330746}
   - {fileID: 114999959379276412}
-  - {fileID: 114375048088246122}
   - {fileID: 114509657680086346}
-  - {fileID: 114519351253582726}
   - {fileID: 114758945796238814}
   - {fileID: 114190806581360314}
-  - {fileID: 114489948354707230}
   - {fileID: 114642818468581878}
---- !u!114 &114145555990223964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 488, y: 920}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114145555990223964}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114549378934683340}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114145555990223964}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114758945796238814}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: 'Are you sure you want to save the game?
-
-
-    Saving Game..'
+  - {fileID: 625700990806583242}
 --- !u!114 &114190806581360314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +36,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1768, y: 1272}
+  position: {x: 1816, y: 1272}
   ports:
     keys:
     - input
@@ -111,10 +58,7 @@ MonoBehaviour:
       _node: {fileID: 114190806581360314}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114489948354707230}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -122,138 +66,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   lockPlayer: 0
---- !u!114 &114249187821330746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1320, y: 712}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114249187821330746}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114249187821330746}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: 'The game has been saved
-
-
-    bois'
---- !u!114 &114375048088246122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1824182cc119b401ebd7abb31a219a90, type: 3}
-  m_Name: Sound
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1848, y: 968}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114375048088246122}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114509657680086346}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114375048088246122}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114999959379276412}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: 93f02324984424ca1bda0c08b2163dec, type: 3}
---- !u!114 &114489948354707230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e27b0fcc4292a492cbc6e9c7ad95c7c9, type: 3}
-  m_Name: Update ID
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2344, y: 1208}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114489948354707230}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114190806581360314}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114489948354707230}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  newId: 0
 --- !u!114 &114509657680086346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,61 +103,15 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114375048088246122}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: 'oh my gewd
-
-
-    boi'
---- !u!114 &114519351253582726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e27b0fcc4292a492cbc6e9c7ad95c7c9, type: 3}
-  m_Name: Update ID
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2376, y: 952}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114519351253582726}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
         node: {fileID: 114999959379276412}
         reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114519351253582726}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  newId: 0
+  message: Game has been saved!
 --- !u!114 &114549378934683340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +125,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 232, y: 936}
+  position: {x: 40, y: 920}
   ports:
     keys:
     - input
@@ -383,7 +149,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114145555990223964}
+        node: {fileID: 625700990806583242}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -405,7 +171,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1368, y: 1288}
+  position: {x: 1416, y: 1240}
   ports:
     keys:
     - input
@@ -437,7 +203,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  message: you want sum
+  message: Come back any time!
 --- !u!114 &114752680757416700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +263,7 @@ MonoBehaviour:
   m_Name: Sound
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1048, y: 1208}
+  position: {x: 888, y: 1128}
   ports:
     keys:
     - input
@@ -508,8 +274,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: 114145555990223964}
+      - fieldName: output1
+        node: {fileID: 625700990806583242}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -543,7 +309,7 @@ MonoBehaviour:
   m_Name: Default Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 888}
+  position: {x: -200, y: 872}
   ports:
     keys:
     - input
@@ -585,7 +351,7 @@ MonoBehaviour:
   m_Name: Save Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 808, y: 696}
+  position: {x: 792, y: 856}
   ports:
     keys:
     - input
@@ -595,7 +361,10 @@ MonoBehaviour:
       _node: {fileID: 114991411926961130}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: output
+        node: {fileID: 625700990806583242}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
@@ -627,7 +396,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2136, y: 1000}
+  position: {x: 1816, y: 1112}
   ports:
     keys:
     - input
@@ -639,7 +408,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 114375048088246122}
+        node: {fileID: 114509657680086346}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -649,10 +418,7 @@ MonoBehaviour:
       _node: {fileID: 114999959379276412}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114519351253582726}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -660,3 +426,63 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   lockPlayer: 0
+--- !u!114 &625700990806583242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7fa37d97aa88fb4eb3a16cfb0a91f7f, type: 3}
+  m_Name: Yes Or No Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: 888}
+  ports:
+    keys:
+    - output1
+    - input
+    - output
+    values:
+    - _fieldName: output1
+      _node: {fileID: 625700990806583242}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114758945796238814}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 625700990806583242}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114549378934683340}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 625700990806583242}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114991411926961130}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  output1: {fileID: 0}
+  message: Are you sure you want to save the game?

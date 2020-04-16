@@ -5,7 +5,8 @@ using UnityEngine;
 [NodeTint("#FF0F55")]
 public class HasItem : OceanNode
 {
-    [Output(backingValue = ShowBackingValue.Never)] public OceanNode output1;
+    [Output(backingValue = ShowBackingValue.Never)] public OceanNode hasItem;
+    [Output(backingValue = ShowBackingValue.Never)] public OceanNode noItem;
 
     public Item item;
     public int amount;
@@ -13,6 +14,6 @@ public class HasItem : OceanNode
     public override void Use(Interactable interactable)
     {
         base.Use(interactable);
-        NextNode(Inventory.instance.HasItem(item , amount) ? 0 : 1);
+        NextNode(Inventory.instance.HasItem(item , amount) ? "noItem" : "hasitem");
     }
 }

@@ -19,15 +19,23 @@ public class UI_Speech : MonoBehaviour
     [SerializeField] AudioClip messageAudio;
     public List<string> currentMessages = new List<string>();
 
+    [Header("Yes No Container")]
+    public GameObject yesNoContainer;
+    public GameObject yesIndicator;
+    public GameObject noIndicator;
+    public Button noButton;
+    public bool isYesSelected;
+
     private AudioSource source;
     private bool showingMessage;
-    private Action onMessageFinished;
+    private List<Action> onMessageFinished = new List<Action>();
 
 	private void Start()
 	{
         instance = this;
         source = GetComponent<AudioSource>();
         messageContainer.SetActive  (false);
+        EnableYesOrNo(false);
 	}
 
     public void StartMessages ()
@@ -65,12 +73,7 @@ public class UI_Speech : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) || !first)
             {
 				first = true;
-                //if(finishedMessage.Count < 1)
-                    //NextNode();
 
-                //if(finishedMessage.Count == 1)
-                    //first = false;
-                   
                 curMessageIndex++;
 								
                 if(curMessageIndex > currentMessages.Count - 1)
@@ -90,6 +93,9 @@ public class UI_Speech : MonoBehaviour
         showingMessage = false;
         messageContainer.SetActive(false);
         currentMessages.Clear();
+
+        //Debug.Log("NEXT NODE");
+
         NextNode();
         waitNode = false;
         first = false;
@@ -135,9 +141,19 @@ public class UI_Speech : MonoBehaviour
 
     private void NextNode ()
     {
-        if(onMessageFinished != null)
+        if(onMessageFinished.Count > 0)
         {
-            onMessageFinished.Invoke();
+            if(yesNoContainer.activeSelf)
+                yesNoContainer.SetActive(false);
+
+            if (isYesSelected && onMessageFinished.Count > 1)
+            {
+                onMessageFinished[1].Invoke();
+            } 
+            else
+            {
+                onMessageFinished[0].Invoke();
+            }
         }
         else
         {
@@ -154,7 +170,14 @@ public class UI_Speech : MonoBehaviour
 
     string[] splitMessage;
 
-    public void AddMessage (string _message , Action _onFinished)
+    public void AddMessage (string _message, Action _onFinished)
+    {
+        List<Action> actions = new List<Action>();
+        actions.Add(_onFinished);
+        AddMessage(_message, actions);
+    }
+
+    public void AddMessage (string _message , List<Action> _onFinished)
     {
         Message a = new Message();
 
@@ -171,10 +194,29 @@ public class UI_Speech : MonoBehaviour
             currentMessages.Add(a.messages[i]);
         }
 
-        onMessageFinished = null;
+        onMessageFinished.Clear();
 
-        onMessageFinished += _onFinished;
+        onMessageFinished = _onFinished;
+
+        if(_onFinished.Count > 1)
+        {
+            EnableYesOrNo(true);
+        }
 
         StartMessages();
+    }
+
+    public void EnableYesOrNo (bool toggle)
+    {
+        yesNoContainer.SetActive(toggle);
+        UIManager.instance.SetCurrentButton(noButton.gameObject);
+        SelectYesOrNo(false);
+    }
+
+    public void SelectYesOrNo(bool isYes)
+    {
+        isYesSelected = isYes;
+        noIndicator.SetActive(isYes);
+        yesIndicator.SetActive(!isYes);
     }
 }

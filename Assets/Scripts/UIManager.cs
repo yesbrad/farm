@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public enum PanelID
 {
@@ -16,8 +18,11 @@ public class UIManager : MonoBehaviour
 
     public Panel[] panels;
 
+    public EventSystem eventSystem;
+
     void Awake () {
         instance = this;
+        eventSystem = EventSystem.current;
     }
 
     public void EnablePanel (PanelID _panelID , bool _enabled)
@@ -34,6 +39,11 @@ public class UIManager : MonoBehaviour
     public void LoadGameUI ()
     {
         EnablePanel(PanelID.HUD , true);
+    }
+
+    public void SetCurrentButton (GameObject button)
+    {
+        eventSystem.SetSelectedGameObject(button.gameObject);
     }
 }
 

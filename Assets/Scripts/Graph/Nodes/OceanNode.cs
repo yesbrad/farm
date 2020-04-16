@@ -25,18 +25,18 @@ public class OceanNode : Node
 
     public virtual void NextNode ()
     {
-        NextNode(0);
+        NextNode("");
     }
 
-    public virtual void NextNode (int node = 0)
+    public virtual void NextNode (string node)
     {
-        if(node == 0)
+        if(node == "")
         {
             CallNode("output");
             return;
         }
 
-        CallNode("output" + node);
+        CallNode(node);
     }
 
     public virtual void CallNode (string _outputPort)
