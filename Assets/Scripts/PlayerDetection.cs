@@ -46,21 +46,14 @@ public class PlayerDetection : MonoBehaviour
 
     void CheckForNewEvent()
     {
-        //if (currentCellBounds != GetBoundsOfCell())
-        //{
-
-        Debug.DrawRay(transform.position, PlayerController.instance.faceDirection);
-
-
-            RaycastHit2D hit2Ds = new RaycastHit2D();
+        RaycastHit2D hit2Ds = new RaycastHit2D();
 
         hit2Ds = Physics2D.BoxCast(GetCenterCellPosition() + PlayerController.instance.faceDirection * PlayerController.instance.tileDistance, Vector2.one, 0, Vector2.zero, 1, 1 << LayerMask.NameToLayer("Interractable"));
 
-            if (hit2Ds.collider != null)
-                currentInterractable = hit2Ds.collider.GetComponent<Interactable>();
-            else
-                currentInterractable = null;
-        //}
+        if (hit2Ds.collider != null)
+            currentInterractable = hit2Ds.collider.GetComponent<Interactable>();
+        else
+            currentInterractable = null;
     }
 
     Bounds GetBoundsOfCell ()

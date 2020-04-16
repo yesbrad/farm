@@ -6,8 +6,10 @@ public class Interactable : MonoBehaviour
 {
     public StoryGraph graph;
 
+    public bool isEngaged;
+
     public void Interact ()
     {
-        graph.StartEvent();
+        graph.StartEvent(this);
     }
 }

@@ -8,8 +8,9 @@ public class UpdateID : OceanNode
 {
     public EventIDs newId;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
+        base.Use(interactable);
         SaveManager.CurrentID = newId;        
         NextNode();
     }

@@ -44,42 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009b794d8682e4f7b9f5fdd1f056c043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeStages:
-  - name: Lel
-    lifeTime: 60
-    stageTile: {fileID: 11400000, guid: fe123919b2b1b466195555f6894f7b21, type: 2}
-    isAdult: 0
-    waterUsage: 1
-  - name: Dog
-    lifeTime: 120
-    stageTile: {fileID: 11400000, guid: 9a32208bb708e443aba23635e3ae189b, type: 2}
-    isAdult: 0
-    waterUsage: 1
-  - name: Trix
-    lifeTime: 300
-    stageTile: {fileID: 11400000, guid: 1d864ff6dfc5a4d189482ab3e7e179d8, type: 2}
-    isAdult: 1
-    waterUsage: 10
-  - name: Giz
-    lifeTime: 400
-    stageTile: {fileID: 11400000, guid: b4a2080f94d824f468bc6dacfcfb3037, type: 2}
-    isAdult: 0
-    waterUsage: 0
-  currentStage:
-    name: 
-    lifeTime: 5
-    stageTile: {fileID: 0}
-    isAdult: 0
-    waterUsage: 1
-  waterLevelStart: 100
-  waterUsage: 0.05
-  ageSpeed: 2
-  harvestItem: {fileID: 11400000, guid: 42d17d1fa523740038edeefe19c01695, type: 2}
-  failedItem: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
-  waterLevel: 0
-  curAgeLevel: 0
-  currentStageIndex: 0
-  cropState: 0
 --- !u!50 &1821868955
 Rigidbody2D:
   serializedVersion: 4

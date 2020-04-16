@@ -6,17 +6,12 @@ using XNode;
 [NodeTint("#5550FF")]
 public class TimeSkip : OceanNode
 {
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
 
         CropManager.instance.TimeSkip();
         
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
         base.NextNode();
-	}
+    }
 }

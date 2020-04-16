@@ -9,9 +9,9 @@ public class GiveItem : OceanNode
     public Item item;
     public int amount;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
 
         if (item != null)
         {

@@ -8,10 +8,10 @@ public class SimpleChat : OceanNode
 {
     [TextArea(5,100)] public string message;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
+        base.Use(interactable);
         PlayerController.instance.LockPlayer(true);
-        base.Use();
         AddMessage(message);
 	}
 

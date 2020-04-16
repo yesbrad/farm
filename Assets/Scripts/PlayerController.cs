@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
 	public bool CanMove(Vector3 _direction)
 	{
-        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1);
+        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1, ~(1 << 9));
 	}
 
 

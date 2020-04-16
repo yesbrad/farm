@@ -6,15 +6,10 @@ using XNode;
 [NodeTint("#000000")]
 public class SaveNode : OceanNode
 {
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
         SaveManager.Save();
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
         base.NextNode();
-	}
+    }
 }

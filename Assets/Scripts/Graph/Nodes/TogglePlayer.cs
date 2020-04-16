@@ -8,17 +8,12 @@ public class TogglePlayer : OceanNode
 {
     public bool lockPlayer;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
 
         PlayerController.instance.LockPlayer(lockPlayer);
         
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
         base.NextNode();
-	}
+    }
 }

@@ -8,9 +8,9 @@ public class Sound : OceanNode
 {
     public AudioClip audioClip;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
 
         if (audioClip != null)
         {
@@ -19,11 +19,6 @@ public class Sound : OceanNode
         else
             Debug.Log("Missing AUDIO From Node: " + id);
         
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
         base.NextNode();
-	}
+    }
 }

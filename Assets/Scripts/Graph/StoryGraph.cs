@@ -11,8 +11,11 @@ public class StoryGraph : NodeGraph
     private DefaultNode defaultNode;
     private List<Start> startNodes = new List<Start>();
 
-    public void StartEvent()
+    Interactable interactable;
+    
+    public void StartEvent(Interactable parentInteractable)
     {
+        interactable = parentInteractable;
         startNodes.Clear();
 
         for (int i = 0; i < nodes.Count; i++)
@@ -30,12 +33,12 @@ public class StoryGraph : NodeGraph
         {
             if (startNodes[z].eventIDs == SaveManager.CurrentID)
             {
-                startNodes[z].Use();
+                startNodes[z].Use(interactable);
                 return;
             }
         }
 
 		if (defaultNode != null)
-			defaultNode.Use();
+			defaultNode.Use(interactable);
     }
 }

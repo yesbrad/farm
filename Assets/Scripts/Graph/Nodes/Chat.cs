@@ -8,9 +8,9 @@ public class Chat : OceanNode
     
     [TextArea(5,100)] public string message;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
+        base.Use(interactable);
         AddMessage(message);
 	}
 }

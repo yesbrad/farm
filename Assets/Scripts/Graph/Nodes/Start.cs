@@ -8,14 +8,9 @@ public class Start : OceanNode
 {
     public EventIDs eventIDs;
 
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
+        base.Use(interactable);
         base.NextNode();
-	}
+    }
 }

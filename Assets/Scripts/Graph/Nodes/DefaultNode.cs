@@ -6,14 +6,9 @@ using XNode;
 [NodeTint("#FF0000")]
 public class DefaultNode : OceanNode
 {
-	public override void Use()
+	public override void Use(Interactable interactable)
 	{
-        base.Use();
-        NextNode();
-    }
-
-	public override void NextNode()
-	{
+        base.Use(interactable);
         base.NextNode();
-	}
+    }
 }
