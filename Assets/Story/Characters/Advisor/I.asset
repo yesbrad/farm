@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1400, y: 936}
+  position: {x: 1352, y: 1192}
   ports:
     keys:
     - input
@@ -53,6 +53,194 @@ MonoBehaviour:
 
 
     Now go plant!'
+--- !u!114 &-5468083236913659665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d07d0310c19c4daab05b76eac608d66, type: 3}
+  m_Name: Give Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1304, y: 968}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -5468083236913659665}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5431084408581587869}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5468083236913659665}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2630337212515068166}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
+  amount: 5
+--- !u!114 &-5431084408581587869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: 1016}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -5431084408581587869}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -2212888455365389658}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5431084408581587869}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5468083236913659665}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: 'Oh no see the wheat died!
+
+
+    I''ll give you another 5 seeds.'
+--- !u!114 &-4599148423670899367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: 744}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4599148423670899367}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasItem
+        node: {fileID: 114063615107035266}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4599148423670899367}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114919751080390652}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: Ah You got the wheat Keep planting!
+--- !u!114 &-2630337212515068166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1736, y: 936}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -2630337212515068166}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5468083236913659665}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -2630337212515068166}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114919751080390652}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: You you recieved '5' Wheat.
 --- !u!114 &-2281139015527259655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +254,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1400, y: 1240}
+  position: {x: 1352, y: 1496}
   ports:
     keys:
     - input
@@ -99,6 +287,53 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: Then bugger off and keep planting!
+--- !u!114 &-2212888455365389658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35648250504fc7844983d3b73c4d0d04, type: 3}
+  m_Name: Take Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: 1016}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -2212888455365389658}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasItem
+        node: {fileID: 8734565132108071830}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -2212888455365389658}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5431084408581587869}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  item: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
+  amount: 5
 --- !u!114 &-1283770646928910166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +347,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 440, y: 968}
+  position: {x: -440, y: 824}
   ports:
     keys:
     - input
@@ -123,11 +358,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output1
-        node: {fileID: 114063615107035266}
-        reroutePoints: []
-      - fieldName: noItem
-        node: {fileID: 114063615107035266}
+      - fieldName: output
+        node: {fileID: 114363803575701780}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -139,7 +371,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1096495721303981476}
+        node: {fileID: 114063615107035266}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -161,7 +393,7 @@ MonoBehaviour:
   m_Name: Yes Or No Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1080, y: 1096}
+  position: {x: 1032, y: 1352}
   ports:
     keys:
     - yes
@@ -249,15 +481,19 @@ MonoBehaviour:
   - {fileID: 114013708277594018}
   - {fileID: 114374500046958602}
   - {fileID: 114063615107035266}
-  - {fileID: 114214500516485910}
   - {fileID: 114311292261246346}
   - {fileID: 114740704342240068}
-  - {fileID: 114600995516236432}
   - {fileID: -1024879766420812297}
   - {fileID: 1096495721303981476}
   - {fileID: -1283770646928910166}
   - {fileID: -2281139015527259655}
   - {fileID: -7195075282048598613}
+  - {fileID: 8734565132108071830}
+  - {fileID: -5431084408581587869}
+  - {fileID: -4599148423670899367}
+  - {fileID: -5468083236913659665}
+  - {fileID: -2630337212515068166}
+  - {fileID: -2212888455365389658}
 --- !u!114 &114013708277594018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +634,7 @@ MonoBehaviour:
   m_Name: Has Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: 840}
+  position: {x: -200, y: 808}
   ports:
     keys:
     - input
@@ -412,7 +648,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 114363803575701780}
+        node: {fileID: -1283770646928910166}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -433,7 +669,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114214500516485910}
+        node: {fileID: -4599148423670899367}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -445,7 +681,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -1283770646928910166}
+        node: {fileID: 8734565132108071830}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -569,7 +805,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1448, y: 344}
+  position: {x: 1512, y: 376}
   ports:
     keys:
     - input
@@ -604,49 +840,6 @@ MonoBehaviour:
   message: 'You you recieved ''5'' Wheat.
 
     And tools.'
---- !u!114 &114214500516485910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9173fba31435d47d581855fb876cab71, type: 3}
-  m_Name: Simple Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 456, y: 744}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114214500516485910}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: hasItem
-        node: {fileID: 114063615107035266}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114214500516485910}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: Ah You got the wheat Keep planting!
 --- !u!114 &114236812261492308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,7 +1074,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -72, y: 856}
+  position: {x: -728, y: 776}
   ports:
     keys:
     - input
@@ -902,7 +1095,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114063615107035266}
+        node: {fileID: -1283770646928910166}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1069,45 +1262,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: Come Back Later.
---- !u!114 &114600995516236432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ceb13e6bd9554194957bf558cb2fc19, type: 3}
-  m_Name: Time Skip
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 968, y: 792}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114600995516236432}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114600995516236432}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
 --- !u!114 &114702481997483832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,6 +1428,12 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -2281139015527259655}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: -2630337212515068166}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -4599148423670899367}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
@@ -1303,7 +1463,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 1032}
+  position: {x: 648, y: 1288}
   ports:
     keys:
     - input
@@ -1314,8 +1474,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: -1283770646928910166}
+      - fieldName: noItem
+        node: {fileID: 8734565132108071830}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1336,3 +1496,75 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: You must come back with 30 wheat!
+--- !u!114 &8734565132108071830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048bbde95317d49068d4c962d256ff6f, type: 3}
+  m_Name: Has Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 104, y: 1048}
+  ports:
+    keys:
+    - input
+    - output
+    - hasItem
+    - noItem
+    values:
+    - _fieldName: input
+      _node: {fileID: 8734565132108071830}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: noItem
+        node: {fileID: 114063615107035266}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8734565132108071830}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: hasItem
+      _node: {fileID: 8734565132108071830}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2212888455365389658}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: noItem
+      _node: {fileID: 8734565132108071830}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1096495721303981476}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  hasItem: {fileID: 0}
+  noItem: {fileID: 0}
+  item: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
+  amount: 5

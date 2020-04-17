@@ -18,19 +18,19 @@ MonoBehaviour:
   icon: {fileID: 21300004, guid: c2a765a60cda34783acb97a8b24097fb, type: 3}
   lifeStages:
   - name: Young
-    lifeTime: 20
+    lifeTime: 5
     stageTile: {fileID: 11400000, guid: ab75ea66fdcb646b588a2039809c2231, type: 2}
     isAdult: 0
   - name: Teen
-    lifeTime: 60
+    lifeTime: 5
     stageTile: {fileID: 11400000, guid: 4c61aef73b7e64361bac696f7b3f4590, type: 2}
     isAdult: 0
   - name: Adult
-    lifeTime: 180
+    lifeTime: 5
     stageTile: {fileID: 11400000, guid: ad2918fdd9e4547d186359b9510552a1, type: 2}
     isAdult: 1
   - name: Dead
-    lifeTime: 20
+    lifeTime: 5
     stageTile: {fileID: 11400000, guid: 739161361fe854d9d9a491bd86dc8dc5, type: 2}
     isAdult: 0
   harvestItem: {fileID: 11400000}
