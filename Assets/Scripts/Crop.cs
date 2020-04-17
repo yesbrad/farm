@@ -78,14 +78,16 @@ public class Crop : MonoBehaviour
 
     public void NextStage ()
     {
-        currentStageIndex++;
-
-        if(currentStageIndex > cropData.lifeStages.Length - 1)
+        //Debug.Log("NextStage");
+        
+        if(currentStageIndex > cropData.lifeStages.Length - 2)
         {
             Die();
+            //Debug.Log("Crop JUST DIED");
             return;
         }
-
+        
+        currentStageIndex++;
         InitStage(currentStageIndex);
     }
 
@@ -93,7 +95,7 @@ public class Crop : MonoBehaviour
     {
         if(_stage > cropData.lifeStages.Length - 1)
         {
-            Debug.LogError("Crop stage was higher than the crops stage data");
+            Debug.LogError("Crop stage was higher than the crops stage data: " + _stage);
             DeleteCrop();
             return;
         }

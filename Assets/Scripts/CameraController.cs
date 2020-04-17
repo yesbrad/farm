@@ -8,6 +8,6 @@ public class CameraController : MonoBehaviour
     public Transform playerTransform;
 
     void Update () {
-        transform.position = Vector3.MoveTowards(transform.position , playerTransform.position + -Vector3.forward , speed * Time.deltaTime);
+        transform.position = playerTransform.position + -Vector3.forward;// Vector3.MoveTowards(transform.position , playerTransform.position + -Vector3.forward , speed * Time.deltaTime);
     }
 }

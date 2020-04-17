@@ -47,7 +47,7 @@ public class OceanNode : Node
 
         if (port == null) 
         {
-            Debug.Log("No Output Found Stopping Here!");
+            Debug.Log("No Output Found Stopping Here! Output is: " + _outputPort);
             nodeInteractable.isEngaged = false;
             nodeInteractable = null;
             return;

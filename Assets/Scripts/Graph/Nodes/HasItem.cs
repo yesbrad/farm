@@ -14,6 +14,6 @@ public class HasItem : OceanNode
     public override void Use(Interactable interactable)
     {
         base.Use(interactable);
-        NextNode(Inventory.instance.HasItem(item , amount) ? "noItem" : "hasitem");
+        NextNode(Inventory.instance.HasItem(item , amount) ? "hasItem" : "noItem");
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3441271133484174847}
   - component: {fileID: 3441271133484174846}
   - component: {fileID: 2865372723306470112}
+  - component: {fileID: 867179850}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -45,9 +46,10 @@ Camera:
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -97,3 +99,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   playerTransform: {fileID: 0}
+--- !u!114 &867179850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441271133484174833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 2
+  m_RefResolutionX: 32
+  m_RefResolutionY: 32
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0

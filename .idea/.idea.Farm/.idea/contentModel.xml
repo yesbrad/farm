@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\if i just lae here\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\if i just lae here\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Farm.1382793439.00" t="ExcludeRecursive" />
+    <e p="D:\Unity Projects\Farm" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="External" t="Include">
+          <e p="Tilemap" t="Include">
+            <e p="Brushes" t="Include">
+              <e p="Coordinate Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="CoordinateBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="GameObject Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="GameObjectBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Group Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="GroupBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Line Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="LineBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Prefab Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="PrefabBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Random Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="RandomBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Tint Brush" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="TintBrush.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Tint Brush Smooth" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="TintBrushSmooth.cs" t="Include" />
+                  </e>
+                  <e p="TintTextureGenerator.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="TintedTilemap.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="GridInformation" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="GridInformation.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Tiles" t="Include">
+              <e p="Animated Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AnimatedTile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Hexagonal Rule Tile" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="HexagonalRuleTileEditor.cs" t="Include" />
+                </e>
+                <e p="HexagonalRuleTile.cs" t="Include" />
+              </e>
+              <e p="Isometric Rule Tile" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="IsometricRuleTileEditor.cs" t="Include" />
+                </e>
+                <e p="IsometricRuleTile.cs" t="Include" />
+              </e>
+              <e p="Pipeline Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="PipelineTile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Random Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="RandomTile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Rule Override Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="RuleOverrideTileEditor.cs" t="Include" />
+                  </e>
+                  <e p="RuleOverrideTile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Rule Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="CustomRuleTileMenu.cs" t="Include" />
+                    <e p="RuleTileEditor.cs" t="Include" />
+                  </e>
+                  <e p="RuleTile.cs" t="Include" />
+                </e>
+                <e p="ScriptTemplates" t="Include">
+                  <e p="NewCustomRuleTile.cs.txt" t="Include" />
+                </e>
+              </e>
+              <e p="Terrain Tile" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="TerrainTile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Weighted Random Tile" t="Include">
+                <e p="WeightedRandomTile.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="xNode-master" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Attributes" t="Include">
+                <e p="NodeEnum.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="Drawers" t="Include">
+                  <e p="NodeEnumDrawer.cs" t="Include" />
+                </e>
+                <e p="NodeEditor.cs" t="Include" />
+                <e p="NodeEditorAction.cs" t="Include" />
+                <e p="NodeEditorAssetModProcessor.cs" t="Include" />
+                <e p="NodeEditorBase.cs" t="Include" />
+                <e p="NodeEditorGUI.cs" t="Include" />
+                <e p="NodeEditorGUILayout.cs" t="Include" />
+                <e p="NodeEditorPreferences.cs" t="Include" />
+                <e p="NodeEditorReflection.cs" t="Include" />
+                <e p="NodeEditorResources.cs" t="Include" />
+                <e p="NodeEditorUtilities.cs" t="Include" />
+                <e p="NodeEditorWindow.cs" t="Include" />
+                <e p="NodeGraphEditor.cs" t="Include" />
+                <e p="RenamePopup.cs" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="ScriptTemplates" t="Include">
+                    <e p="xNode_NodeGraphTemplate.cs.txt" t="Include" />
+                    <e p="xNode_NodeTemplate.cs.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Node.cs" t="Include" />
+              <e p="NodeDataCache.cs" t="Include" />
+              <e p="NodeGraph.cs" t="Include" />
+              <e p="NodePort.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AudioController.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="Crop.cs" t="Include" />
+          <e p="CropManager.cs" t="Include" />
+          <e p="DesignManager.cs" t="Include" />
+          <e p="Enums.cs" t="Include" />
+          <e p="FarmUtilities.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="Graph" t="Include">
+            <e p="Nodes" t="Include">
+              <e p="Chat.cs" t="Include" />
+              <e p="DefaultNode.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="ChatEditor.cs" t="Include" />
+              </e>
+              <e p="Fade.cs" t="Include" />
+              <e p="GiveItem.cs" t="Include" />
+              <e p="HasItem.cs" t="Include" />
+              <e p="OceanNode.cs" t="Include" />
+              <e p="SaveNode.cs" t="Include" />
+              <e p="SimpleChat.cs" t="Include" />
+              <e p="Sound.cs" t="Include" />
+              <e p="Start.cs" t="Include" />
+              <e p="TimeSkip.cs" t="Include" />
+              <e p="TogglePlayer.cs" t="Include" />
+              <e p="UpdateID.cs" t="Include" />
+              <e p="YesOrNoChat.cs" t="Include" />
+            </e>
+            <e p="StoryGraph.cs" t="Include" />
+          </e>
+          <e p="Interactable.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="Items" t="Include">
+            <e p="Clippers.cs" t="Include" />
+            <e p="CropItem.cs" t="Include" />
+            <e p="HoeItem.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+          </e>
+          <e p="OceanPartyUtils.cs" t="Include" />
+          <e p="Panel.cs" t="Include" />
+          <e p="PanelSwap.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerDetection.cs" t="Include" />
+          <e p="SaveData.cs" t="Include" />
+          <e p="SaveManager.cs" t="Include" />
+          <e p="SimpleGizmo.cs" t="Include" />
+          <e p="StaticStrings.cs" t="Include" />
+          <e p="StoryData.cs" t="Include" />
+          <e p="StoryManager.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="InventoryNotifier.cs" t="Include" />
+            <e p="UI_Fade.cs" t="Include" />
+            <e p="UI_HUD.cs" t="Include" />
+            <e p="UI_Inventory.cs" t="Include" />
+            <e p="UI_Settings.cs" t="Include" />
+            <e p="UI_SOR.cs" t="Include" />
+            <e p="UI_Speech.cs" t="Include" />
+          </e>
+          <e p="UIManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Farm.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

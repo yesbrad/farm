@@ -19,7 +19,6 @@ MonoBehaviour:
   - {fileID: 114752680757416700}
   - {fileID: 114999959379276412}
   - {fileID: 114509657680086346}
-  - {fileID: 114758945796238814}
   - {fileID: 114190806581360314}
   - {fileID: 114642818468581878}
   - {fileID: 625700990806583242}
@@ -36,7 +35,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1816, y: 1272}
+  position: {x: 1016, y: 1064}
   ports:
     keys:
     - input
@@ -79,7 +78,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1416, y: 1048}
+  position: {x: 1240, y: 760}
   ports:
     keys:
     - input
@@ -125,7 +124,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 40, y: 920}
+  position: {x: 72, y: 920}
   ports:
     keys:
     - input
@@ -171,7 +170,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1416, y: 1240}
+  position: {x: 680, y: 1000}
   ports:
     keys:
     - input
@@ -182,8 +181,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: 114758945796238814}
+      - fieldName: no
+        node: {fileID: 625700990806583242}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_Name: Sound
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1080, y: 952}
+  position: {x: 968, y: 808}
   ports:
     keys:
     - input
@@ -250,52 +249,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 1108409772c684b209d4dd5d73f786a1, type: 3}
---- !u!114 &114758945796238814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1824182cc119b401ebd7abb31a219a90, type: 3}
-  m_Name: Sound
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 888, y: 1128}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114758945796238814}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output1
-        node: {fileID: 625700990806583242}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114758945796238814}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114642818468581878}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: 1108409772c684b209d4dd5d73f786a1, type: 3}
 --- !u!114 &114856732567356424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +262,7 @@ MonoBehaviour:
   m_Name: Default Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: 872}
+  position: {x: -184, y: 936}
   ports:
     keys:
     - input
@@ -351,7 +304,7 @@ MonoBehaviour:
   m_Name: Save Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 792, y: 856}
+  position: {x: 680, y: 872}
   ports:
     keys:
     - input
@@ -362,7 +315,7 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
+      - fieldName: yes
         node: {fileID: 625700990806583242}
         reroutePoints: []
       _direction: 0
@@ -396,7 +349,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1816, y: 1112}
+  position: {x: 1608, y: 872}
   ports:
     keys:
     - input
@@ -439,20 +392,21 @@ MonoBehaviour:
   m_Name: Yes Or No Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: 888}
+  position: {x: 344, y: 888}
   ports:
     keys:
-    - output1
+    - yes
     - input
     - output
+    - no
     values:
-    - _fieldName: output1
+    - _fieldName: yes
       _node: {fileID: 625700990806583242}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114758945796238814}
+        node: {fileID: 114991411926961130}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -474,9 +428,18 @@ MonoBehaviour:
       _node: {fileID: 625700990806583242}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: no
+      _node: {fileID: 625700990806583242}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114991411926961130}
+        node: {fileID: 114642818468581878}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -484,5 +447,6 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  output1: {fileID: 0}
+  yes: {fileID: 0}
+  no: {fileID: 0}
   message: Are you sure you want to save the game?
