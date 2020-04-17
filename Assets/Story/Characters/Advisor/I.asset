@@ -53,6 +53,78 @@ MonoBehaviour:
 
 
     Now go plant!'
+--- !u!114 &-6172226269425587925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048bbde95317d49068d4c962d256ff6f, type: 3}
+  m_Name: Has Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: 952}
+  ports:
+    keys:
+    - input
+    - output
+    - hasItem
+    - noItem
+    values:
+    - _fieldName: input
+      _node: {fileID: -6172226269425587925}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasItem
+        node: {fileID: 8734565132108071830}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6172226269425587925}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: hasItem
+      _node: {fileID: -6172226269425587925}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1096495721303981476}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: noItem
+      _node: {fileID: -6172226269425587925}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2212888455365389658}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  hasItem: {fileID: 0}
+  noItem: {fileID: 0}
+  item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
+  amount: 1
 --- !u!114 &-5468083236913659665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +138,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1304, y: 968}
+  position: {x: 1496, y: 952}
   ports:
     keys:
     - input
@@ -113,7 +185,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 888, y: 1016}
+  position: {x: 1080, y: 1000}
   ports:
     keys:
     - input
@@ -208,7 +280,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1736, y: 936}
+  position: {x: 1928, y: 920}
   ports:
     keys:
     - input
@@ -300,7 +372,7 @@ MonoBehaviour:
   m_Name: Take Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 1016}
+  position: {x: 712, y: 1032}
   ports:
     keys:
     - input
@@ -311,8 +383,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: hasItem
-        node: {fileID: 8734565132108071830}
+      - fieldName: noItem
+        node: {fileID: -6172226269425587925}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -494,6 +566,7 @@ MonoBehaviour:
   - {fileID: -5468083236913659665}
   - {fileID: -2630337212515068166}
   - {fileID: -2212888455365389658}
+  - {fileID: -6172226269425587925}
 --- !u!114 &114013708277594018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,7 +1536,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 648, y: 1288}
+  position: {x: 680, y: 1272}
   ports:
     keys:
     - input
@@ -1476,6 +1549,9 @@ MonoBehaviour:
       connections:
       - fieldName: noItem
         node: {fileID: 8734565132108071830}
+        reroutePoints: []
+      - fieldName: hasItem
+        node: {fileID: -6172226269425587925}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1544,7 +1620,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2212888455365389658}
+        node: {fileID: -6172226269425587925}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

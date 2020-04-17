@@ -8,7 +8,6 @@ public enum CropState
     Nothing,
     Normal,
     Dead,
-    Dying,
 }
 
 public class Crop : MonoBehaviour
@@ -131,7 +130,8 @@ public class Crop : MonoBehaviour
         if (cropData == null)
             return;
         
-        InitStage(cropData.lifeStages.Length - 2);
+        if(cropState == CropState.Normal)
+            InitStage(cropData.lifeStages.Length - 2);
     }
 
     public void Harvest ()
