@@ -53,35 +53,33 @@ public class PlayerController : MonoBehaviour
 			{
                 if(Input.GetButton("Up") && CanMove(Vector3.up) && !Input.GetButton("Left") && !Input.GetButton("Right"))
 				{
-					moveDirection += Vector3.up * tileDistance;
-                    faceDirection = Vector3.up;
-					SetAni("Up");
+					Move(Vector3.up);
 				}
 
                 if(Input.GetButton("Down") && CanMove(Vector3.down) && !Input.GetButton("Left") && !Input.GetButton("Right"))
 				{
-					moveDirection += Vector3.down * tileDistance;
-                    faceDirection = Vector3.down;
-					SetAni("Down");
+					Move(Vector3.down);
 				}
 
                 if(Input.GetButton("Left") && CanMove(Vector3.left) && !Input.GetButton("Up") && !Input.GetButton("Down"))
 				{
-				    moveDirection += Vector3.left * tileDistance;
-                    faceDirection = Vector3.left;
-				    SetAni("Left");
+					Move(Vector3.left);
 				}
 
                 if(Input.GetButton("Right") && CanMove(Vector3.right) && !Input.GetButton("Up") && !Input.GetButton("Down"))
 				{
-				    moveDirection += Vector3.right * tileDistance;
-                    faceDirection = Vector3.right;
-					SetAni("Right");
+				    Move(Vector3.right);
 				}
-
-
 			}
 		}
+	}
+
+	public void Move(Vector3 direction)
+	{
+		moveDirection += direction * tileDistance;
+		faceDirection = direction.normalized;
+		animator.SetFloat("Horizontal", direction.normalized.x);
+		animator.SetFloat("Vertical", direction.normalized.y);
 	}
 
 	public static bool AboutEqual(double x, double y)
@@ -89,12 +87,6 @@ public class PlayerController : MonoBehaviour
         double epsilon = Math.Max(Math.Abs(x), Math.Abs(y)) * 1E-15;
         return Math.Abs(x - y) <= epsilon;
     }
-
-	public void SetAni (string dir)
-	{
-        animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
-        animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-	}
 
 	public bool CanMove(Vector3 _direction)
 	{
