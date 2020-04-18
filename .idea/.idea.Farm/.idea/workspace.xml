@@ -34,6 +34,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
       </list>
     </option>
   </component>
@@ -74,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587095365873</updated>
       <workItem from="1587095380874" duration="12439000" />
-      <workItem from="1587178383139" duration="1520000" />
+      <workItem from="1587178383139" duration="1954000" />
     </task>
     <servers />
   </component>

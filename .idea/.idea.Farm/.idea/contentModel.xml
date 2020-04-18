@@ -182,6 +182,7 @@
           <e p="Graph" t="Include">
             <e p="Nodes" t="Include">
               <e p="Chat.cs" t="Include" />
+              <e p="CheckFlag.cs" t="Include" />
               <e p="DefaultNode.cs" t="Include" />
               <e p="Editor" t="Include">
                 <e p="ChatEditor.cs" t="Include" />
@@ -190,7 +191,9 @@
               <e p="GiveItem.cs" t="Include" />
               <e p="HasItem.cs" t="Include" />
               <e p="OceanNode.cs" t="Include" />
+              <e p="RemoveFlag.cs" t="Include" />
               <e p="SaveNode.cs" t="Include" />
+              <e p="SetFlag.cs" t="Include" />
               <e p="SimpleChat.cs" t="Include" />
               <e p="Sound.cs" t="Include" />
               <e p="Start.cs" t="Include" />
