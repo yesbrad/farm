@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         InitTilemaps();
+        
+//        if (!SaveData.HasKey(SaveData.c_inData))
+//            Inventory.instance.GiveDefaultItems();
 	}
 
 	private void Start()

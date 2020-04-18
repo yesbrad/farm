@@ -60,6 +60,17 @@ public class CropManager : MonoBehaviour
         currentCrops.Remove(_crop);
     }
 
+    public bool HasGrowingCrop(CropItem crop)
+    {
+        for (int i = 0; i < currentCrops.Count; i++)
+        {
+            if(currentCrops[i].cropData != null && currentCrops[i].cropData.id == crop.id && !currentCrops[i].IsDead)
+                return true;
+        }
+
+        return false;
+    }
+    
     public void Save ()
     {
         if (crops == null)
@@ -108,5 +119,4 @@ public class CropManager : MonoBehaviour
             AddCrop(a);
         }
     }
-
 }

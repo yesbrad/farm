@@ -120,5 +120,6 @@ public class PlayerController : MonoBehaviour
         Vector3 newPos = (Vector3)JsonUtility.FromJson(a , typeof(Vector3));
 
         transform.position = newPos;
+        moveDirection = newPos;
     }
 }

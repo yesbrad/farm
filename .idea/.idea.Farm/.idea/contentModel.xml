@@ -189,6 +189,7 @@
               </e>
               <e p="Fade.cs" t="Include" />
               <e p="GiveItem.cs" t="Include" />
+              <e p="HasCrop.cs" t="Include" />
               <e p="HasItem.cs" t="Include" />
               <e p="OceanNode.cs" t="Include" />
               <e p="RemoveFlag.cs" t="Include" />

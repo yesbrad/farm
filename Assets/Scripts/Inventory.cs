@@ -46,10 +46,7 @@ public class Inventory : MonoBehaviour
 	private void Awake()
 	{
         instance = this;
-
-        if (!SaveData.HasKey(SaveData.c_inData))
-            GiveDefaultItems();
-	}
+    }
 
 	private void Update()
 	{
@@ -138,7 +135,7 @@ public class Inventory : MonoBehaviour
         UI_HUD.instance.RefreshEquip(primaryEquipped);
     }
 
-    private void GiveDefaultItems ()
+    public void GiveDefaultItems ()
     {
         if (defaultItems.Count < 1)
             return;
