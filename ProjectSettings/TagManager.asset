@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Crop
+  - Script
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Crop
   - Interractable
   - Locked
-  - 
+  - FloorInteract
   - 
   - 
   - 

@@ -2,5 +2,6 @@
 {
     ZWelcome,
     ZFirstTask,
-    ZSell,
+    OnlyWheat,
+    Roses,
 }

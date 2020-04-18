@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1352, y: 1192}
+  position: {x: 1336, y: 1272}
   ports:
     keys:
     - input
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: Has Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 376, y: 952}
+  position: {x: 392, y: 952}
   ports:
     keys:
     - input
@@ -125,6 +125,63 @@ MonoBehaviour:
   noItem: {fileID: 0}
   item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
   amount: 1
+--- !u!114 &-5863108469595748789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: 680}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -5863108469595748789}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasItem
+        node: {fileID: 114063615107035266}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5863108469595748789}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1316079006379530739}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: 'Ahh Yes!
+
+
+    You got the 30 wheat! Well done!
+
+
+    Unforunetly I only
+    have wheat atm. I think theres some Roses up near Victoria Beach from my last
+    patch I made.
+
+
+    Dont get Distracted!'
 --- !u!114 &-5468083236913659665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +278,7 @@ MonoBehaviour:
 
 
     I''ll give you another 5 seeds.'
---- !u!114 &-4599148423670899367
+--- !u!114 &-5396426604393110607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,35 +287,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
-  m_Name: Chat
+  m_Script: {fileID: 11500000, guid: 7f0b1443075e34d35913d4d32757a389, type: 3}
+  m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 120, y: 744}
+  position: {x: -152, y: 1608}
   ports:
     keys:
     - input
     - output
     values:
     - _fieldName: input
-      _node: {fileID: -4599148423670899367}
+      _node: {fileID: -5396426604393110607}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: hasItem
-        node: {fileID: 114063615107035266}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
       _dynamic: 0
     - _fieldName: output
-      _node: {fileID: -4599148423670899367}
+      _node: {fileID: -5396426604393110607}
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114919751080390652}
+        node: {fileID: 8796657093088202916}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -266,7 +320,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  message: Ah You got the wheat Keep planting!
+  eventIDs: 2
 --- !u!114 &-2630337212515068166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +380,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1352, y: 1496}
+  position: {x: 1336, y: 1464}
   ports:
     keys:
     - input
@@ -372,7 +426,7 @@ MonoBehaviour:
   m_Name: Take Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 712, y: 1032}
+  position: {x: 728, y: 1000}
   ports:
     keys:
     - input
@@ -406,6 +460,102 @@ MonoBehaviour:
   output: {fileID: 0}
   item: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
   amount: 5
+--- !u!114 &-1981531708887605208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 1848}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -1981531708887605208}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: noItem
+        node: {fileID: 7784029488578314039}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -1981531708887605208}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -880791363361569850}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: 'The Roses are up near Victoria Beach. Just head north from here and follow
+    the path.
+
+
+    You must ignore the any other distractions!'
+--- !u!114 &-1316079006379530739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0fcc4292a492cbc6e9c7ad95c7c9, type: 3}
+  m_Name: Update ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: 728}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -1316079006379530739}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5863108469595748789}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -1316079006379530739}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8466290002676832369}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  newId: 2
 --- !u!114 &-1283770646928910166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +615,7 @@ MonoBehaviour:
   m_Name: Yes Or No Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1032, y: 1352}
+  position: {x: 1064, y: 1336}
   ports:
     keys:
     - yes
@@ -523,6 +673,52 @@ MonoBehaviour:
   yes: {fileID: 0}
   no: {fileID: 0}
   message: Do you need more Help?
+--- !u!114 &-880791363361569850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
+  m_Name: Toggle Player
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1352, y: 1832}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -880791363361569850}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1981531708887605208}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 1303313424087117555}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -880791363361569850}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  lockPlayer: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,11 +758,20 @@ MonoBehaviour:
   - {fileID: -7195075282048598613}
   - {fileID: 8734565132108071830}
   - {fileID: -5431084408581587869}
-  - {fileID: -4599148423670899367}
   - {fileID: -5468083236913659665}
   - {fileID: -2630337212515068166}
   - {fileID: -2212888455365389658}
   - {fileID: -6172226269425587925}
+  - {fileID: -5863108469595748789}
+  - {fileID: -1316079006379530739}
+  - {fileID: 8466290002676832369}
+  - {fileID: -5396426604393110607}
+  - {fileID: 8796657093088202916}
+  - {fileID: 7784029488578314039}
+  - {fileID: -1981531708887605208}
+  - {fileID: 7893914807716808261}
+  - {fileID: 1303313424087117555}
+  - {fileID: -880791363361569850}
 --- !u!114 &114013708277594018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,7 +947,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -4599148423670899367}
+        node: {fileID: -5863108469595748789}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -765,7 +970,7 @@ MonoBehaviour:
   hasItem: {fileID: 0}
   noItem: {fileID: 0}
   item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
-  amount: 6
+  amount: 30
 --- !u!114 &114077957815456750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +984,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 952, y: 248}
+  position: {x: 856, y: 232}
   ports:
     keys:
     - input
@@ -1147,7 +1352,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -728, y: 776}
+  position: {x: -712, y: 792}
   ports:
     keys:
     - input
@@ -1481,7 +1686,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2712, y: 776}
+  position: {x: 2600, y: 1304}
   ports:
     keys:
     - input
@@ -1503,9 +1708,6 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: output
         node: {fileID: -2630337212515068166}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: -4599148423670899367}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1572,6 +1774,217 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: You must come back with 30 wheat!
+--- !u!114 &1303313424087117555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0fcc4292a492cbc6e9c7ad95c7c9, type: 3}
+  m_Name: Update ID
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1032, y: 1704}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 1303313424087117555}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 7893914807716808261}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1303313424087117555}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -880791363361569850}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  newId: 3
+--- !u!114 &7784029488578314039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048bbde95317d49068d4c962d256ff6f, type: 3}
+  m_Name: Has Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 344, y: 1688}
+  ports:
+    keys:
+    - hasItem
+    - noItem
+    - input
+    - output
+    values:
+    - _fieldName: hasItem
+      _node: {fileID: 7784029488578314039}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7893914807716808261}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: noItem
+      _node: {fileID: 7784029488578314039}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1981531708887605208}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 7784029488578314039}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 8796657093088202916}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7784029488578314039}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  hasItem: {fileID: 0}
+  noItem: {fileID: 0}
+  item: {fileID: 11400000, guid: 682e670ba112b944b941dc95d830ca8c, type: 2}
+  amount: 1
+--- !u!114 &7893914807716808261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 1624}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 7893914807716808261}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasItem
+        node: {fileID: 7784029488578314039}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7893914807716808261}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1303313424087117555}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: 'Great you found the roses!  I''ll need you to get me 50 more Roses!
+
+
+    Be
+    patient and I''ll be able to help.'
+--- !u!114 &8466290002676832369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
+  m_Name: Toggle Player
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 792, y: 744}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8466290002676832369}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1316079006379530739}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8466290002676832369}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  lockPlayer: 0
 --- !u!114 &8734565132108071830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,7 +1998,7 @@ MonoBehaviour:
   m_Name: Has Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 104, y: 1048}
+  position: {x: 56, y: 1064}
   ports:
     keys:
     - input
@@ -1644,3 +2057,49 @@ MonoBehaviour:
   noItem: {fileID: 0}
   item: {fileID: 11400000, guid: fd49a5b621f1a45bf9aa6588094c8b92, type: 2}
   amount: 5
+--- !u!114 &8796657093088202916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
+  m_Name: Toggle Player
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 104, y: 1688}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8796657093088202916}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5396426604393110607}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8796657093088202916}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7784029488578314039}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  lockPlayer: 1

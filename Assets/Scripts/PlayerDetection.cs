@@ -23,25 +23,44 @@ public class PlayerDetection : MonoBehaviour
 
 	void Update()
     {
-        CheckForNewCrop();
-        CheckForNewEvent();
+        if (currentCellBounds != GetBoundsOfCell())
+        {
+            currentCellBounds = GetBoundsOfCell();
+            CheckForNewCrop();
+            CheckForNewEvent();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(currentInterractable != null && CurrentCrop == null)
+            {
+                if(!UI_Speech.instance.ShowingMessage)
+                    currentInterractable.Interact();
+            }
+        }
     }
 
     void CheckForNewCrop ()
     {
-        if(currentCellBounds != GetBoundsOfCell())
-        {
-            currentCellBounds = GetBoundsOfCell();
+        RaycastHit2D hit2D = new RaycastHit2D();
 
-            RaycastHit2D hit2Ds = new RaycastHit2D();
+            hit2D = Physics2D.BoxCast(GetCenterCellPosition() , Vector2.one , 0 ,Vector2.zero , 1 , 1 << LayerMask.NameToLayer("FloorInteract"));
 
-            hit2Ds = Physics2D.BoxCast(GetCenterCellPosition() , Vector2.one , 0 ,Vector2.zero , 1 , 1 << LayerMask.NameToLayer("Crop"));
-            
-            if(hit2Ds.collider != null)
-                currentCrop = hit2Ds.collider.GetComponent<Crop>();
-            else
-                currentCrop = null;
-        }
+            currentCrop = null;
+
+            if (hit2D.collider != null)
+            {
+                switch (hit2D.collider.tag)
+                {
+                    case "Crop":
+                        currentCrop = hit2D.collider.GetComponent<Crop>();
+                        break;
+                    case "Script":
+                        hit2D.collider.GetComponent<Interactable>().Interact();
+                        break;
+                }
+            }
+        
     }
 
     void CheckForNewEvent()

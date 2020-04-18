@@ -41,15 +41,13 @@ public class PlayerController : MonoBehaviour
 	{
         if(GameManager.instance.CurrentState != GameState.Game)
             return;
-
-        if (playerlocked)
-            return;
-
+        
 		if(transform.position != moveDirection)
 		{
             rig.position = Vector3.MoveTowards(transform.position , moveDirection , Time.deltaTime * speed);
-		}		
-
+		}	
+		
+		if (!playerlocked)
 		{
 			if(transform.position == moveDirection)
 			{
@@ -86,7 +84,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-    public static bool AboutEqual(double x, double y)
+	public static bool AboutEqual(double x, double y)
     {
         double epsilon = Math.Max(Math.Abs(x), Math.Abs(y)) * 1E-15;
         return Math.Abs(x - y) <= epsilon;
@@ -100,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
 	public bool CanMove(Vector3 _direction)
 	{
-        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1, ~(1 << 9));
+        return !Physics2D.BoxCast(transform.position + _direction * tileDistance, Vector2.one , 0 ,Vector2.zero , 1, ~(1 << LayerMask.NameToLayer("FloorInteract")));
 	}
 
 

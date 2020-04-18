@@ -30,7 +30,12 @@ public class UI_Speech : MonoBehaviour
     private bool showingMessage;
     private List<Action> onMessageFinished = new List<Action>();
 
-	private void Start()
+    public bool ShowingMessage
+    {
+        get { return showingMessage; }
+    }
+
+    private void Start()
 	{
         instance = this;
         source = GetComponent<AudioSource>();
@@ -46,14 +51,7 @@ public class UI_Speech : MonoBehaviour
 
 	private void Update()
 	{
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            if(PlayerDetection.instance.currentInterractable != null && PlayerDetection.instance.CurrentCrop == null)
-            {
-                if(!UI_Speech.instance.showingMessage)
-                    PlayerDetection.instance.currentInterractable.Interact();
-            }
-        }
+
 	}
 
     bool waitNode;
