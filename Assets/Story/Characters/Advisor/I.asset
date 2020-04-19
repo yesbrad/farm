@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 88, y: 680}
+  position: {x: 104, y: 744}
   ports:
     keys:
     - input

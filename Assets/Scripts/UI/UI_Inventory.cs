@@ -26,14 +26,14 @@ public class UI_Inventory : Panel
 
         itemContent.Clear();
 
-        List<Inventory.Stack> items = Inventory.instance.CurrentItems;
+        List<Inventory.Stack> items = Inventory.instance.CurrentStacks;
 
         for (int i = 0; i < items.Count; i++)
         {
             GameObject cont = Instantiate(inventoryItem, scrollContent.transform);
             InventoryNotifier notifier = cont.GetComponentInChildren<InventoryNotifier>();
             notifier.SetItem(items[i].GUID , items[i].stackID);
-            notifier.nameText.text = items[i].itemStack[0].name;
+            notifier.nameText.text = items[i].stackItems[0].name;
             notifier.stackAmountText.text = items[i].Amount.ToString();
 
             itemContent.Add(cont);

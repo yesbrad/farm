@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Inventory : MonoBehaviour
 {
@@ -8,18 +10,18 @@ public class Inventory : MonoBehaviour
     public class Stack
     {
         public string stackID;
-        public List<Item> itemStack = new List<Item>();
+        public List<Item> stackItems = new List<Item>();
 
         public Stack(Item _item)
         {
             stackID = _item.id;
-            itemStack.Add(_item);
+            stackItems.Add(_item);
             guid = stackID + Random.Range(0f, 10000f);
         }
 
         private string guid;
         public string GUID { get { return guid; } }
-        public int Amount { get { return itemStack.Count; }}
+        public int Amount { get { return stackItems.Count; }}
     }
 
     public System.Action onEquppedItem;
@@ -29,18 +31,19 @@ public class Inventory : MonoBehaviour
     [SerializeField] List<Item> defaultItems;
 
     [SerializeField]
-    private List<Stack> currentItems = new List<Stack>();
+    private List<Stack> currentStacks = new List<Stack>();
     private bool inventoryOpen;
     private Item primaryEquipped;
 	
-    public List<Stack> CurrentItems { get { return currentItems; }}
+    public List<Stack> CurrentStacks { get { return currentStacks; }}
     public Item EquippedItem { get { return primaryEquipped; }}
 
     public ItemsSave itemsSave;
 
+    [Serializable]
     public class ItemsSave
     {
-        public List<Item> items = new List<Item>();
+        public List<string> saveIDs = new List<string>();
     }
 
 	private void Awake()
@@ -68,9 +71,9 @@ public class Inventory : MonoBehaviour
                     {
                         int itemAmount = 0;
 
-                        for (int i = 0; i < stack.itemStack.Count; i++)
+                        for (int i = 0; i < stack.stackItems.Count; i++)
                         {
-                            if (primaryEquipped.id == stack.itemStack[i].id)
+                            if (primaryEquipped.id == stack.stackItems[i].id)
                                 itemAmount++;
                         }
 
@@ -115,11 +118,11 @@ public class Inventory : MonoBehaviour
 
     public void EquipItem(string _selectedGUID)
     {
-        for (int i = 0; i < currentItems.Count; i++)
+        for (int i = 0; i < currentStacks.Count; i++)
         {
-            if(currentItems[i].GUID == _selectedGUID)
+            if(currentStacks[i].GUID == _selectedGUID)
             {
-                primaryEquipped = currentItems[i].itemStack[0];
+                primaryEquipped = currentStacks[i].stackItems[0];
                 UI_HUD.instance.RefreshEquip(primaryEquipped);
 				onEquppedItem.Invoke();
                 return;
@@ -150,13 +153,15 @@ public class Inventory : MonoBehaviour
     {
         Stack stack = GetStack(_item.id);
 
+        Debug.Log("YEEE: " + stack);
+        
         if (stack != null)
         {
-            stack.itemStack.Add(_item);
+            stack.stackItems.Add(_item);
             return;            
         }
 
-        currentItems.Add(new Stack(_item));
+        currentStacks.Add(new Stack(_item));
     }
 
     public void RemoveItemFromStack (Item _item)
@@ -165,40 +170,54 @@ public class Inventory : MonoBehaviour
 
         if (stack != null)
         {
-            if(stack.itemStack.Count < 2)
+            if(stack.stackItems.Count < 2)
             {
-                currentItems.Remove(stack);
+                currentStacks.Remove(stack);
                 return;
             }
 
-            stack.itemStack.RemoveAt(0);
+            stack.stackItems.RemoveAt(0);
         }
     }
 
     public Item GetItemFromStacks (Item _item) 
     {
         Stack stack = GetStack(_item.id);
-        return stack.itemStack[0];
+        return stack.stackItems[0];
     }
 
     public Stack GetStack (string _id)
     {
-        for (int i = 0; i < currentItems.Count; i++)
+        for (int i = 0; i < currentStacks.Count; i++)
         {
-            if (currentItems[i].stackID == _id)
+            if (currentStacks[i].stackID == _id)
             {
-                return currentItems[i];
+                return currentStacks[i];
             }
         }
 
         return null;
     }
 
+    public Item GetItemData(string id)
+    {
+        Item[] items = Resources.LoadAll<Item>("Items");
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].id == id)
+                return items[i];
+        }
+
+        Debug.LogError("Get Item has returned Null Cause: ID doesnt match any Items in resources");
+        return null;
+    }
+
     public bool HasItem (Item _item , int _amount = 1)
     {
-        for (int i = 0; i < currentItems.Count; i++)
+        for (int i = 0; i < currentStacks.Count; i++)
         {
-            if (currentItems[i].stackID == _item.id && currentItems[i].Amount >= _amount)
+            if (currentStacks[i].stackID == _item.id && currentStacks[i].Amount >= _amount)
                 return true;
         }
 
@@ -207,24 +226,26 @@ public class Inventory : MonoBehaviour
 
     public void ClearInventory ()
     {
-        currentItems.Clear();
+        currentStacks.Clear();
         DeEquip();
         RefreshUI();
     }
 
     public void Save ()
     {
-        ItemsSave a = new ItemsSave();
-
-        for (int i = 0; i < currentItems.Count; i++)
+        ItemsSave items = new ItemsSave();
+        
+        for (int i = 0; i < currentStacks.Count; i++)
         {
-            for (int x = 0; x < currentItems[i].itemStack.Count; x++)
+            for (int x = 0; x < currentStacks[i].stackItems.Count; x++)
             {
-                a.items.Add(currentItems[i].itemStack[x]);
+                Debug.Log("ITEM: " + currentStacks[i].stackItems[x].id);
+                items.saveIDs.Add(currentStacks[i].stackItems[x].id);
             }
         }
 
-        string save = JsonUtility.ToJson(a);
+        string save = JsonUtility.ToJson(items);
+        Debug.Log(save);
         PlayerPrefs.SetString(SaveData.c_inData ,save);
     }
 
@@ -233,17 +254,18 @@ public class Inventory : MonoBehaviour
         ClearInventory();
 
         string a = PlayerPrefs.GetString(SaveData.c_inData);
+        Debug.Log(a);
 
-        if (string.IsNullOrEmpty(a))
-            return;
-
-        ItemsSave save = (ItemsSave)JsonUtility.FromJson(a, typeof(ItemsSave));
-
-        for (int i = 0; i < save.items.Count; i++)
+        if (!string.IsNullOrEmpty(a))
         {
-            AddToStack(save.items[i]);
-        }
+            ItemsSave save = (ItemsSave) JsonUtility.FromJson(a, typeof(ItemsSave));
+            
+            for (int i = 0; i < save.saveIDs.Count; i++)
+            {
+                AddToStack(GetItemData(save.saveIDs[i]));
+            }
 
-        UI_Inventory.instance.RefreshUI();
+            UI_Inventory.instance.RefreshUI();
+        }
     }
 }
