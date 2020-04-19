@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1656, y: 1016}
+  position: {x: 1656, y: 1208}
   ports:
     keys:
     - input
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1272, y: 952}
+  position: {x: 1288, y: 1112}
   ports:
     keys:
     - input
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 872}
+  position: {x: -1032, y: 1000}
   ports:
     keys:
     - input
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 424, y: 568}
+  position: {x: 456, y: 600}
   ports:
     keys:
     - input
@@ -185,6 +185,49 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: You lost your roses have some more
+--- !u!114 &-3022952468883533609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca0e9d5cd65e49098cc6859945a0a04, type: 3}
+  m_Name: Toggle Player
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: 888}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3022952468883533609}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 635261688901019075}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3022952468883533609}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  lockPlayer: 0
 --- !u!114 &-2713035916784703278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +241,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 408, y: 920}
+  position: {x: 136, y: 1160}
   ports:
     keys:
     - input
@@ -209,8 +252,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: 7212866291439415018}
+      - fieldName: noCrop
+        node: {fileID: 2868581376553226489}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -300,7 +343,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 776, y: 920}
+  position: {x: 824, y: 968}
   ports:
     keys:
     - input
@@ -369,6 +412,10 @@ MonoBehaviour:
   - {fileID: -3070229353835476542}
   - {fileID: -1404286464995130321}
   - {fileID: 8903485646826971535}
+  - {fileID: 2868581376553226489}
+  - {fileID: 1902118406358237462}
+  - {fileID: -3022952468883533609}
+  - {fileID: 635261688901019075}
 --- !u!114 &114130963486832746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,6 +802,169 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
+--- !u!114 &635261688901019075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2104b9b4b95ee6a439621e2610ebccbc, type: 3}
+  m_Name: Move Player
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 184, y: 920}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 635261688901019075}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 1902118406358237462}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 635261688901019075}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3022952468883533609}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  movement: {x: 0, y: -1}
+--- !u!114 &1902118406358237462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: 936}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 1902118406358237462}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: hasCrop
+        node: {fileID: 2868581376553226489}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1902118406358237462}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 635261688901019075}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: Go give the roses to to old man!
+--- !u!114 &2868581376553226489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d5d36599f80eb4aa0df2c623160bdb, type: 3}
+  m_Name: Has Crop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -552, y: 1048}
+  ports:
+    keys:
+    - hasCrop
+    - noCrop
+    - input
+    - output
+    values:
+    - _fieldName: hasCrop
+      _node: {fileID: 2868581376553226489}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1902118406358237462}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: noCrop
+      _node: {fileID: 2868581376553226489}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2713035916784703278}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 2868581376553226489}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 7212866291439415018}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2868581376553226489}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  hasCrop: {fileID: 0}
+  noCrop: {fileID: 0}
+  item: {fileID: 11400000, guid: 682e670ba112b944b941dc95d830ca8c, type: 2}
 --- !u!114 &6079081700341772331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +978,7 @@ MonoBehaviour:
   m_Name: Sound
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1032, y: 920}
+  position: {x: 1064, y: 1048}
   ports:
     keys:
     - input
@@ -814,7 +1024,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 136, y: 920}
+  position: {x: -792, y: 1048}
   ports:
     keys:
     - input
@@ -838,7 +1048,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2713035916784703278}
+        node: {fileID: 2868581376553226489}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
