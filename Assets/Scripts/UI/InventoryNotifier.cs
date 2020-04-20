@@ -10,7 +10,9 @@ public class InventoryNotifier : MonoBehaviour
 
 	public Text nameText;
     public Text stackAmountText;
-
+    public Image iconImage;
+    public Button button; 
+    
     public GameObject selector;
 
 	private void Start()

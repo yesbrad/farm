@@ -152,8 +152,6 @@ public class Inventory : MonoBehaviour
     public void AddToStack (Item _item)
     {
         Stack stack = GetStack(_item.id);
-
-        Debug.Log("YEEE: " + stack);
         
         if (stack != null)
         {
@@ -239,13 +237,11 @@ public class Inventory : MonoBehaviour
         {
             for (int x = 0; x < currentStacks[i].stackItems.Count; x++)
             {
-                Debug.Log("ITEM: " + currentStacks[i].stackItems[x].id);
                 items.saveIDs.Add(currentStacks[i].stackItems[x].id);
             }
         }
 
         string save = JsonUtility.ToJson(items);
-        Debug.Log(save);
         PlayerPrefs.SetString(SaveData.c_inData ,save);
     }
 
@@ -254,7 +250,6 @@ public class Inventory : MonoBehaviour
         ClearInventory();
 
         string a = PlayerPrefs.GetString(SaveData.c_inData);
-        Debug.Log(a);
 
         if (!string.IsNullOrEmpty(a))
         {

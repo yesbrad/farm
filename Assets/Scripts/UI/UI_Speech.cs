@@ -40,7 +40,8 @@ public class UI_Speech : MonoBehaviour
         instance = this;
         source = GetComponent<AudioSource>();
         messageContainer.SetActive  (false);
-        EnableYesOrNo(false);
+        yesNoContainer.SetActive(false);
+        SelectYesOrNo(false);
 	}
 
     public void StartMessages ()

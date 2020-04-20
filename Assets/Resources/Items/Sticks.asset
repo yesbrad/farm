@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Sticks
   id: sticks
   isKeyItem: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c2a765a60cda34783acb97a8b24097fb, type: 3}

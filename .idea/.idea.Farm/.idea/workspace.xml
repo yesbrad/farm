@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Panel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Start.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDetection.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,15 +29,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/CropItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CropManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_HUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FarmUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_SOR.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/StoryGraph.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/InventoryNotifier.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -44,7 +50,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/TakeItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetFlag.cs" />
@@ -57,7 +62,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/InventoryNotifier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_SOR.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" />
       </list>
     </option>
   </component>
@@ -100,7 +109,9 @@
       <workItem from="1587095380874" duration="12439000" />
       <workItem from="1587178383139" duration="21896000" />
       <workItem from="1587264399828" duration="1381000" />
-      <workItem from="1587271627108" duration="4922000" />
+      <workItem from="1587271627108" duration="10573000" />
+      <workItem from="1587312423645" duration="1396000" />
+      <workItem from="1587345199905" duration="7985000" />
     </task>
     <servers />
   </component>
