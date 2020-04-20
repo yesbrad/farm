@@ -6,7 +6,6 @@ using XNode;
 [NodeTint("#000055")]
 public class Fade : OceanNode
 {
-    [Output(backingValue = ShowBackingValue.Never)] public OceanNode outputMiddle;
     public float speed = 1;
     public float delay = 0.5f;
 
@@ -14,12 +13,7 @@ public class Fade : OceanNode
 	{
         base.Use(interactable);
         UI_Fade.instance.Fade(NextNode, speed, delay, () => {
-            CallNode("outputMiddle");
+            base.NextNode();
         });
     }
-
-	public override void NextNode()
-	{
-        base.NextNode();
-	}
 }

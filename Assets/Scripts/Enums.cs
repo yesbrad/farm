@@ -4,4 +4,5 @@
     ZFirstTask,
     OnlyWheat,
     Roses,
+    FindingCherrys,
 }

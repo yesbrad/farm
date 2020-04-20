@@ -46,4 +46,9 @@ MonoBehaviour:
   defaultItems:
   - {fileID: 11400000, guid: 0f752a086458a4bbeb5b2e486aa390a4, type: 2}
   - {fileID: 11400000, guid: 4592b456e849a4c81be21adbca4dd2e1, type: 2}
-  currentItems: []
+  - {fileID: 11400000, guid: 682e670ba112b944b941dc95d830ca8c, type: 2}
+  - {fileID: 11400000, guid: daf5613bab15848bea36b30273569064, type: 2}
+  - {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
+  currentStacks: []
+  itemsSave:
+    saveIDs: []

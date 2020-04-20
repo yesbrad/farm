@@ -8,7 +8,20 @@ public class SaveManager : MonoBehaviour
     public static string c_inData = "inSave";
     public static string c_player = "playerSave";
 
-    public static EventIDs CurrentID;
+    private static EventIDs currentID;
+    
+    public static EventIDs CurrentID
+    {
+        get => currentID;
+
+        set
+        {
+            if(GameManager.instance.isTest)
+                UI_HUD.instance.UpdateTestIDText(value);
+
+            currentID = value;
+        }
+    }
 
     public static bool HasKey(string _id)
     {
@@ -37,6 +50,12 @@ public class SaveManager : MonoBehaviour
 
     public static void Save()
     {
+        if (GameManager.instance.isTest)
+        {
+            Debug.LogWarning("GAME IS IN TEST MODE NOT SAVING");
+            return;
+        }
+        
         Debug.Log("Game has been Saved!");
         CropManager.instance.Save();
         Inventory.instance.Save();

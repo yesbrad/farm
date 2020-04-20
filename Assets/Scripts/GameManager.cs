@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -26,6 +27,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] Tilemap normal;
 
     public GameState defaultState = GameState.Game;
+
+    [Header("DEBUG")] 
+    [SerializeField] public bool isTest;
+    [SerializeField] public bool hasAllCrops;
+    [SerializeField] private EventIDs testID;
+    
     private GameState currentState;
 
     public GameState CurrentState { get { return currentState; }}
@@ -33,12 +40,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
 	{   
         instance = this;
-
         InitTilemaps();
-        
-//        if (!SaveData.HasKey(SaveData.c_inData))
-//            Inventory.instance.GiveDefaultItems();
-	}
+    }
 
 	private void Start()
 	{
@@ -46,10 +49,37 @@ public class GameManager : MonoBehaviour
 
         // Load the default save
         if (defaultState == GameState.Game)
-            SaveManager.Load();
-	}
+        {
+            if (isTest)
+            {
+                Inventory.instance.GiveDefaultItems();
+                SaveManager.CurrentID = testID;
+            }
+            else
+            {
+                SaveManager.Load();
+            }
+        }
 
-	public void ChangeState (GameState _state)
+    }
+
+    private void Update()
+    {
+        if (isTest)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                SaveManager.CurrentID += 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                SaveManager.CurrentID -= 1;
+            }
+        }
+    }
+
+    public void ChangeState (GameState _state)
     {
         currentState = _state;
 

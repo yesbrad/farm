@@ -17,10 +17,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Fade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/RemoveFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SaveNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/UpdateID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasItem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,24 +51,28 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/TakeItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDetection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/RemoveFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckFlag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CropManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/InventoryNotifier.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_SOR.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Fade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_HUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" />
       </list>
     </option>
   </component>
@@ -111,7 +117,7 @@
       <workItem from="1587264399828" duration="1381000" />
       <workItem from="1587271627108" duration="10573000" />
       <workItem from="1587312423645" duration="1396000" />
-      <workItem from="1587345199905" duration="7985000" />
+      <workItem from="1587345199905" duration="21123000" />
     </task>
     <servers />
   </component>
@@ -128,5 +134,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="824" y="387" width="752" height="438" key="#Notifications/1920.0.1920.1050/0.0.1920.1050/-1858.0.1858.1080@0.0.1920.1050" timestamp="1587271720130" />
+    <state x="623" y="227" key="search.everywhere.popup" timestamp="1587363962196">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050/-1858.0.1858.1080@0.0.1920.1050" timestamp="1587363962196" />
   </component>
 </project>

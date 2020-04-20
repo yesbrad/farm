@@ -14,7 +14,7 @@ public class HasCrop : OceanNode
     {
         base.Use(interactable);
 
-        if (CropManager.instance.HasGrowingCrop(item) || Inventory.instance.HasItem(item))
+        if (CropManager.instance.HasGrowingCrop(item) || Inventory.instance.HasItem(item) || (GameManager.instance.isTest && GameManager.instance.hasAllCrops))
         {
             NextNode("hasCrop");
         }

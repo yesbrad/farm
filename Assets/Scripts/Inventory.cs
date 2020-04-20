@@ -145,7 +145,10 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < defaultItems.Count; i++)
         {
-            AddItem(defaultItems[i]);
+            for (int j = 0; j < 100; j++)
+            {
+                AddItem(defaultItems[i]);   
+            }
         }
     }
 
