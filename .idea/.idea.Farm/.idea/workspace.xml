@@ -68,11 +68,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Fade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_HUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +118,7 @@
       <workItem from="1587264399828" duration="1381000" />
       <workItem from="1587271627108" duration="10573000" />
       <workItem from="1587312423645" duration="1396000" />
-      <workItem from="1587345199905" duration="21123000" />
+      <workItem from="1587345199905" duration="24306000" />
     </task>
     <servers />
   </component>

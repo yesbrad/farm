@@ -2331,7 +2331,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  speed: 0.1
+  speed: 5
   delay: 0
 --- !u!114 &4978552373885989339
 MonoBehaviour:

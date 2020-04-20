@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     [Header("DEBUG")] 
     [SerializeField] public bool isTest;
-    [SerializeField] public bool hasAllCrops;
+    internal bool hasAllCrops;
     [SerializeField] private EventIDs testID;
     
     private GameState currentState;
@@ -75,6 +75,12 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha9))
             {
                 SaveManager.CurrentID -= 1;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                hasAllCrops = !hasAllCrops;
+                UI_HUD.instance.UpdateAllCropsText(hasAllCrops);
             }
         }
     }

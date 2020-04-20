@@ -9,7 +9,8 @@ public class UI_HUD : Panel
     public static UI_HUD instance;
 
     [SerializeField] public Text testEventIdText;
-    
+    [SerializeField] public Text allCropsText;
+
     [Header("Equip")]
     [SerializeField] public Image primaryContentSlot;
 
@@ -30,5 +31,11 @@ public class UI_HUD : Panel
         
         testEventIdText.gameObject.SetActive(true);
         testEventIdText.text = "CurrentID: " + id.ToString();
+    }
+
+    public void UpdateAllCropsText(bool on)
+    {
+        allCropsText.gameObject.SetActive(true);
+        allCropsText.text = "Has All Crops: " + on;
     }
 }
