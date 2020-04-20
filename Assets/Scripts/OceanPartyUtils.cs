@@ -20,5 +20,22 @@ public class OceanPartyUtils : MonoBehaviour
         Debug.Log("ReloadedScene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
+    [MenuItem("Ocean Party/Open Event IDs")]
+    static void OpenEventIDS () {
+        string lPath = "Scripts/Enums.cs";
+        foreach (var lAssetPath in AssetDatabase.GetAllAssetPaths())
+        {
+            if (lAssetPath.EndsWith(lPath))
+            {
+                var lScript = (MonoScript)AssetDatabase.LoadAssetAtPath(lAssetPath, typeof(MonoScript));
+                if (lScript != null)
+                {
+                    AssetDatabase.OpenAsset(lScript);
+                    break;
+                }
+            }
+        }
+    }
 }
 #endif

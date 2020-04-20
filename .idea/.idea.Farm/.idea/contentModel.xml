@@ -186,6 +186,7 @@
               <e p="DefaultNode.cs" t="Include" />
               <e p="Editor" t="Include">
                 <e p="ChatEditor.cs" t="Include" />
+                <e p="StartEditor.cs" t="Include" />
               </e>
               <e p="Fade.cs" t="Include" />
               <e p="GiveItem.cs" t="Include" />

@@ -71,7 +71,7 @@ public class SaveManager : MonoBehaviour
         PlayerController.instance.Load();
 
         if (string.IsNullOrEmpty(PlayerPrefs.GetString(StaticStrings.CurrentID)))
-            PlayerPrefs.SetString(StaticStrings.CurrentID, EventIDs.ZWelcome.ToString());
+            PlayerPrefs.SetString(StaticStrings.CurrentID, EventIDs.Z1Welcome.ToString());
 
         CurrentID = (EventIDs)System.Enum.Parse(typeof(EventIDs), PlayerPrefs.GetString(StaticStrings.CurrentID));
     }

@@ -23,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SaveNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/UpdateID.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/External/xNode-master/Scripts/Editor/NodeEditorGUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasItem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/CropItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Editor/StartEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,15 +67,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Fade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OceanPartyUtils.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Editor/StartEditor.cs" />
       </list>
     </option>
   </component>
@@ -118,7 +121,8 @@
       <workItem from="1587264399828" duration="1381000" />
       <workItem from="1587271627108" duration="10573000" />
       <workItem from="1587312423645" duration="1396000" />
-      <workItem from="1587345199905" duration="24306000" />
+      <workItem from="1587345199905" duration="24907000" />
+      <workItem from="1587394738363" duration="2107000" />
     </task>
     <servers />
   </component>
