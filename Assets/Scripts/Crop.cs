@@ -33,7 +33,7 @@ public class Crop : MonoBehaviour
 
         placePosition = transform.position;
 
-        prevTile = DesignManager.instance.grassTile; //TilemapGroup.normal.GetTile(TilemapGroup.normal.WorldToCell(transform.position));
+        prevTile = DesignManager.instance.grassTile;
 
         if(!_loaded)
 		    SetCropState(CropState.Nothing);

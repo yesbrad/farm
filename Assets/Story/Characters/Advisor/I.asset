@@ -1,5 +1,169 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9089388380151514347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12d97c99efcf284f9896fff98b597bc, type: 3}
+  m_Name: Set Tile Swap
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: 3288}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -9089388380151514347}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -6931845041083867243}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9089388380151514347}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2371877694975880943}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  tileSwapId: 0
+  swap: 0
+--- !u!114 &-8334482219115178891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 616, y: 3128}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -8334482219115178891}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: notSet
+        node: {fileID: -8017044425572587270}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -8334482219115178891}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6931845041083867243}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  message: Let the change begin!
+--- !u!114 &-8017044425572587270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1180e841288c5d44a5960dcef4027db, type: 3}
+  m_Name: Check Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: 2968}
+  ports:
+    keys:
+    - set
+    - notSet
+    - input
+    - output
+    values:
+    - _fieldName: set
+      _node: {fileID: -8017044425572587270}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3587239380425187293}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: notSet
+      _node: {fileID: -8017044425572587270}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8334482219115178891}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -8017044425572587270}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -4764326252844580461}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -8017044425572587270}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  set: {fileID: 0}
+  notSet: {fileID: 0}
+  flag: testChange1
 --- !u!114 &-7195075282048598613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +217,53 @@ MonoBehaviour:
 
 
     Now go plant!'
+--- !u!114 &-6931845041083867243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ffb90b6293c4c1f9dbbfeee20f48dc, type: 3}
+  m_Name: Fade
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 968, y: 3240}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -6931845041083867243}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -8334482219115178891}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6931845041083867243}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9089388380151514347}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  speed: 5
+  delay: 0
 --- !u!114 &-6765967893327240799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +608,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 216, y: 2936}
+  position: {x: 168, y: 2920}
   ports:
     keys:
     - input
@@ -421,7 +632,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3587239380425187293}
+        node: {fileID: -8017044425572587270}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -516,7 +727,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 488, y: 2984}
+  position: {x: 1064, y: 3048}
   ports:
     keys:
     - input
@@ -527,8 +738,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: -4764326252844580461}
+      - fieldName: set
+        node: {fileID: -8017044425572587270}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -712,6 +923,52 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: You you recieved '5' Wheat.
+--- !u!114 &-2371877694975880943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabacf25969f1a9449a000ec695e6d70, type: 3}
+  m_Name: Set Flag
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1528, y: 3272}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -2371877694975880943}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -9089388380151514347}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -2371877694975880943}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4978552373885989339}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  flag: testChange1
 --- !u!114 &-2281139015527259655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,7 +1405,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 2904}
+  position: {x: -56, y: 2888}
   ports:
     keys:
     - input
@@ -1241,6 +1498,12 @@ MonoBehaviour:
   - {fileID: 4978552373885989339}
   - {fileID: 9079109099007093499}
   - {fileID: -6311957768574702799}
+  - {fileID: -9089388380151514347}
+  - {fileID: -8017044425572587270}
+  - {fileID: -6931845041083867243}
+  - {fileID: -8334482219115178891}
+  - {fileID: -2371877694975880943}
+  - {fileID: 831460628579003173}
 --- !u!114 &114013708277594018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +1930,9 @@ MonoBehaviour:
       connections:
       - fieldName: input
         node: {fileID: 114337232279557458}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 831460628579003173}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2104,6 +2370,50 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   lockPlayer: 0
+--- !u!114 &831460628579003173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12d97c99efcf284f9896fff98b597bc, type: 3}
+  m_Name: Set Tile Swap
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 216, y: 408}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 831460628579003173}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114303858177664946}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 831460628579003173}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  tileSwapId: 0
+  swap: 0
 --- !u!114 &1096495721303981476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,7 +2519,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 952, y: 2632}
+  position: {x: 872, y: 2616}
   ports:
     keys:
     - input
@@ -2302,7 +2612,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 840, y: 2952}
+  position: {x: 1816, y: 3080}
   ports:
     keys:
     - input
@@ -2315,6 +2625,9 @@ MonoBehaviour:
       connections:
       - fieldName: output
         node: {fileID: -3587239380425187293}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -2371877694975880943}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

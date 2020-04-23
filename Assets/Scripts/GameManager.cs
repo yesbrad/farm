@@ -9,6 +9,17 @@ public static class TilemapGroup
     public static Tilemap plant;
     public static Tilemap collision;
     public static Tilemap normal;
+    
+    public static Tilemap GetTilemap(TilemapGroups group)
+    {
+        switch (group)
+        {
+            case TilemapGroups.Collision: return collision;
+            case TilemapGroups.Plant: return plant;
+            case TilemapGroups.Walkable: return normal;
+            default: return collision;
+        }
+    }
 }
 
 public enum GameState 
@@ -52,6 +63,7 @@ public class GameManager : MonoBehaviour
         {
             if (isTest)
             {
+                SaveData.NewGame();
                 Inventory.instance.GiveDefaultItems();
                 SaveManager.CurrentID = testID;
             }
@@ -113,4 +125,6 @@ public class GameManager : MonoBehaviour
 		SaveManager.NewGame();
         ChangeState(GameState.Game);
     }
+
+
 }

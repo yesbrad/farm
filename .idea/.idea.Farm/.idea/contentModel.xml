@@ -197,6 +197,7 @@
               <e p="RemoveFlag.cs" t="Include" />
               <e p="SaveNode.cs" t="Include" />
               <e p="SetFlag.cs" t="Include" />
+              <e p="SetTileSwap.cs" t="Include" />
               <e p="SimpleChat.cs" t="Include" />
               <e p="Sound.cs" t="Include" />
               <e p="Start.cs" t="Include" />
@@ -227,6 +228,8 @@
           <e p="StaticStrings.cs" t="Include" />
           <e p="StoryData.cs" t="Include" />
           <e p="StoryManager.cs" t="Include" />
+          <e p="TilesSwapManager.cs" t="Include" />
+          <e p="TileSwapEvent.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="InventoryNotifier.cs" t="Include" />
             <e p="UI_Fade.cs" t="Include" />

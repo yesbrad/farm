@@ -7,3 +7,15 @@
     Z6FindingCherrys,
     Z3TreesFirstTask,
 }
+
+public enum TileSwapIDs
+{
+    Bridge1
+}
+
+public enum TilemapGroups
+{
+    Walkable,
+    Collision,
+    Plant,
+}

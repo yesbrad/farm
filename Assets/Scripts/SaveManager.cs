@@ -7,6 +7,7 @@ public class SaveManager : MonoBehaviour
     public static string c_cropData = "cropSave";
     public static string c_inData = "inSave";
     public static string c_player = "playerSave";
+    public static string c_tileSwap = "tileSwapSave";
 
     private static EventIDs currentID;
     
@@ -60,6 +61,7 @@ public class SaveManager : MonoBehaviour
         CropManager.instance.Save();
         Inventory.instance.Save();
         PlayerController.instance.Save();
+        TilesSwapManager.instance.Save();
         PlayerPrefs.SetString(StaticStrings.CurrentID, CurrentID.ToString());
     }
 
@@ -69,7 +71,8 @@ public class SaveManager : MonoBehaviour
         CropManager.instance.Load();
         Inventory.instance.Load();
         PlayerController.instance.Load();
-
+        TilesSwapManager.instance.Load();
+        
         if (string.IsNullOrEmpty(PlayerPrefs.GetString(StaticStrings.CurrentID)))
             PlayerPrefs.SetString(StaticStrings.CurrentID, EventIDs.Z1Welcome.ToString());
 
