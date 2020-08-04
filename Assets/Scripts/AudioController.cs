@@ -6,6 +6,8 @@ public class AudioController : MonoBehaviour
 {
     public static AudioController instance;
 
+    public AudioClip defaultItemGiveSound;
+
     private AudioSource src;
 
 	private void Start()

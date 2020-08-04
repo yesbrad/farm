@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         
 		if(transform.position != moveDirection)
 		{
-            rig.position = Vector3.MoveTowards(transform.position , moveDirection , Time.deltaTime * speed);
+            rig.position = Vector3.MoveTowards(transform.position , moveDirection , speed * Time.deltaTime);
 		}	
 		
 		if (!playerlocked)
@@ -81,12 +81,6 @@ public class PlayerController : MonoBehaviour
 		animator.SetFloat("Horizontal", direction.normalized.x);
 		animator.SetFloat("Vertical", direction.normalized.y);
 	}
-
-	public static bool AboutEqual(double x, double y)
-    {
-        double epsilon = Math.Max(Math.Abs(x), Math.Abs(y)) * 1E-15;
-        return Math.Abs(x - y) <= epsilon;
-    }
 
 	public bool CanMove(Vector3 _direction)
 	{

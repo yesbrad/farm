@@ -11,16 +11,15 @@ public class TileSave
     [System.Serializable]
     public class TileSaveData
     {
-        public TileSwapIDs id;
+        public string id;
         public bool swapped;
 
-        public TileSaveData (TileSwapIDs tileID, bool isSwapped)
+        public TileSaveData (string tileID, bool isSwapped)
         {
             id = tileID;
             swapped = isSwapped;
         }
     }
-    
 
 }
 
@@ -36,26 +35,16 @@ public class TilesSwapManager : MonoBehaviour
         instance = this;
     }
 
-    public TileSave.TileSaveData RegisterTile(TileSwapEvent swapEvent)
+    public void RegisterTile(TileSwapEvent swapEvent)
     {
         tiles.Add(swapEvent);
-
-        for (int i = 0; i < tileSave.tileSaveData.Count; i++)
-        {
-            if (swapEvent.tileSwapId == tileSave.tileSaveData[i].id)
-            {
-                return tileSave.tileSaveData[i];
-            }
-        }
-
-        return null;
     }
 
-    public void SwapTile(TileSwapIDs id, bool swap)
+    public void SwapTile(string id, bool swap)
     {
         for (int i = 0; i < tiles.Count; i++)
         {
-            if (tiles[i].tileSwapId == id)
+            if (tiles[i].GetTileID() == id)
             {
                 tiles[i].SwapTile(swap);   
             }
@@ -68,10 +57,12 @@ public class TilesSwapManager : MonoBehaviour
         
         for (int i = 0; i < tiles.Count; i++)
         {
-            tileSave.tileSaveData.Add(new TileSave.TileSaveData(tiles[i].tileSwapId, tiles[i].swapped));
+            tileSave.tileSaveData.Add(new TileSave.TileSaveData(tiles[i].GetTileID(), tiles[i].swapped));
         }
-        
-        PlayerPrefs.SetString(SaveManager.c_tileSwap, JsonUtility.ToJson(tileSave));
+
+		string jsonSave = JsonUtility.ToJson(tileSave, true);
+
+		PlayerPrefs.SetString(SaveManager.c_tileSwap, jsonSave);
     }
 
     public void Load()
@@ -80,7 +71,18 @@ public class TilesSwapManager : MonoBehaviour
         
         if (PlayerPrefs.HasKey(SaveManager.c_tileSwap))
         {
-            tileSave = JsonUtility.FromJson<TileSave>(PlayerPrefs.GetString(SaveManager.c_tileSwap));
+			tileSave = JsonUtility.FromJson<TileSave>(PlayerPrefs.GetString(SaveManager.c_tileSwap));
+
+			for (int i = 0; i < tileSave.tileSaveData.Count; i++)
+			{
+				for (int x = 0; i < tiles.Count; i++) 
+				{
+					if (tiles[x].GetTileID() == tileSave.tileSaveData[i].id)
+					{
+						tiles[x].LoadTile(tileSave.tileSaveData[i]);
+					}
+				}
+			}
         }
     }
 }

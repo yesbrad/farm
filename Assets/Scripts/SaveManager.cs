@@ -39,6 +39,16 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt(flag, 1);
     }
     
+    public static void SetVarFlag(string flag, int amount)
+    {
+        PlayerPrefs.SetInt(flag, PlayerPrefs.GetInt(flag, 0) + amount);
+    }
+
+    public static int CheckVarFlag(string flag)
+    {
+        return PlayerPrefs.GetInt(flag, 0);
+    }
+    
     public static void RemoveFlag(string flag)
     {
         PlayerPrefs.SetInt(flag, 0);

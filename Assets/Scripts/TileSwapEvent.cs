@@ -6,9 +6,13 @@ using UnityEngine.Tilemaps;
 
 public class TileSwapEvent : MonoBehaviour
 {
+	[Header("Use Swap ID")]
     public TileSwapIDs tileSwapId;
 
-    [Header("Tiles")]
+	[Header("Use Scene ID")]
+	public Interactable interactable;
+
+	[Header("Tiles")]
     public TilemapGroups tilemapGroup;
     public Tile swapTile;
     public bool startSwapped;
@@ -20,24 +24,26 @@ public class TileSwapEvent : MonoBehaviour
     private void Start()
     {
         tilemap = TilemapGroup.GetTilemap(tilemapGroup);
-        originalTile = tilemap.GetTile<Tile>(Vector3Int.RoundToInt(FarmUtilites.GetCenterOfCell(tilemap, transform.position)));
-        
-        TileSave.TileSaveData data = TilesSwapManager.instance.RegisterTile(this);
-
-        if (data != null)
-        {
-            SwapTile(data.swapped);
-        }
-        else
-        {
-            SwapTile(startSwapped);
-        }
+        originalTile = tilemap.GetTile<Tile>(tilemap.WorldToCell(transform.position));
+		TilesSwapManager.instance.RegisterTile(this);
     }
 
     public void SwapTile(bool swap)
     {
         swapped = swap;
-        Tile newTile = swapped ? swapTile : originalTile;
-        TilemapGroup.GetTilemap(tilemapGroup).SetTile(tilemap.WorldToCell(transform.position) , newTile);
+		Tile newTile = swapped ? swapTile : originalTile;
+        tilemap.SetTile(tilemap.WorldToCell(transform.position) , newTile);
     }
+
+	public string GetTileID (){
+		return interactable != null ? interactable.sceneID : tileSwapId.ToString();
+	}
+
+	public void LoadTile (TileSave.TileSaveData data) 
+	{
+		if (data != null)
+			SwapTile(data.swapped);
+        else
+            SwapTile(startSwapped);
+	}
 }

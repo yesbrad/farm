@@ -13,6 +13,11 @@ public enum TileSwapIDs
     Bridge1
 }
 
+public enum VarIDs 
+{
+	TotalTotems,
+}
+
 public enum TilemapGroups
 {
     Walkable,

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Set Tile Swap
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1272, y: 3288}
+  position: {x: 1224, y: 3240}
   ports:
     keys:
     - input
@@ -164,6 +164,7 @@ MonoBehaviour:
   set: {fileID: 0}
   notSet: {fileID: 0}
   flag: testChange1
+  useOnce: 0
 --- !u!114 &-7195075282048598613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +213,12 @@ MonoBehaviour:
   message: 'Use the hoe to dig up dirt, then plant  over the dirt.
 
 
-    You can
-    extract the plant with the clippers.
+    Press ''e''
+    to open the inventory to change items.
+
+
+    You can extract the plant with the
+    clippers.
 
 
     Now go plant!'
@@ -230,7 +235,7 @@ MonoBehaviour:
   m_Name: Fade
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 968, y: 3240}
+  position: {x: 968, y: 3128}
   ports:
     keys:
     - input
@@ -450,7 +455,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2630337212515068166}
+        node: {fileID: 114919751080390652}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -460,6 +465,7 @@ MonoBehaviour:
   output: {fileID: 0}
   item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
   amount: 5
+  autoMessage: 1
 --- !u!114 &-5431084408581587869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +733,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1064, y: 3048}
+  position: {x: 968, y: 2904}
   ports:
     keys:
     - input
@@ -877,52 +883,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   lockPlayer: 0
---- !u!114 &-2630337212515068166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c1a12877cf44a3ca6f979f8b70eb1f, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2136, y: 1416}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -2630337212515068166}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: -5468083236913659665}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -2630337212515068166}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114919751080390652}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  message: You you recieved '5' Wheat.
 --- !u!114 &-2371877694975880943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,6 +929,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   flag: testChange1
+  useOnce: 0
 --- !u!114 &-2281139015527259655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,7 +1203,7 @@ MonoBehaviour:
   m_Name: Toggle Player
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: 840}
+  position: {x: 232, y: 776}
   ports:
     keys:
     - input
@@ -1457,7 +1418,6 @@ MonoBehaviour:
   - {fileID: 114077957815456750}
   - {fileID: 114337232279557458}
   - {fileID: 114919751080390652}
-  - {fileID: 114375835028352870}
   - {fileID: 114156361640859964}
   - {fileID: 114363803575701780}
   - {fileID: 114013708277594018}
@@ -1472,7 +1432,6 @@ MonoBehaviour:
   - {fileID: -7195075282048598613}
   - {fileID: -5431084408581587869}
   - {fileID: -5468083236913659665}
-  - {fileID: -2630337212515068166}
   - {fileID: -5863108469595748789}
   - {fileID: -1316079006379530739}
   - {fileID: 8466290002676832369}
@@ -1598,7 +1557,7 @@ MonoBehaviour:
   m_Name: Update ID
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2312, y: 456}
+  position: {x: 2168, y: 296}
   ports:
     keys:
     - input
@@ -1644,7 +1603,7 @@ MonoBehaviour:
   m_Name: Has Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 824}
+  position: {x: 488, y: 824}
   ports:
     keys:
     - input
@@ -1716,7 +1675,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 856, y: 232}
+  position: {x: 872, y: 232}
   ports:
     keys:
     - input
@@ -1740,13 +1699,13 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114375835028352870}
-        reroutePoints: []
-      - fieldName: input
         node: {fileID: 114311292261246346}
         reroutePoints: []
       - fieldName: input
         node: {fileID: 114740704342240068}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 114156361640859964}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1756,6 +1715,7 @@ MonoBehaviour:
   output: {fileID: 0}
   item: {fileID: 11400000, guid: df9f69984a35b4a6e948804c3db4a4b5, type: 2}
   amount: 5
+  autoMessage: 1
 --- !u!114 &114139319762484012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,7 +1777,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1512, y: 376}
+  position: {x: 1448, y: 264}
   ports:
     keys:
     - input
@@ -1829,7 +1789,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 114375835028352870}
+        node: {fileID: 114077957815456750}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1849,9 +1809,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  message: 'You you recieved ''5'' Wheat.
-
-    And tools.'
+  message: And tools.
 --- !u!114 &114236812261492308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,7 +1954,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1224, y: 408}
+  position: {x: 1160, y: 344}
   ports:
     keys:
     - input
@@ -2027,6 +1985,7 @@ MonoBehaviour:
   output: {fileID: 0}
   item: {fileID: 11400000, guid: 0f752a086458a4bbeb5b2e486aa390a4, type: 2}
   amount: 1
+  autoMessage: 0
 --- !u!114 &114337232279557458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,7 +2088,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1880, y: 408}
+  position: {x: 1800, y: 280}
   ports:
     keys:
     - input
@@ -2182,52 +2141,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: Go! Quick please! Plant now.. Only return when you have '30' Wheat.
---- !u!114 &114375835028352870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1824182cc119b401ebd7abb31a219a90, type: 3}
-  m_Name: Sound
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1208, y: 264}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 114375835028352870}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 114077957815456750}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 114375835028352870}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114156361640859964}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: 80f575901bd2b4305af7e95d04761539, type: 3}
 --- !u!114 &114702481997483832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2287,7 +2200,7 @@ MonoBehaviour:
   m_Name: Give Item
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1224, y: 552}
+  position: {x: 1160, y: 488}
   ports:
     keys:
     - input
@@ -2318,6 +2231,7 @@ MonoBehaviour:
   output: {fileID: 0}
   item: {fileID: 11400000, guid: 4592b456e849a4c81be21adbca4dd2e1, type: 2}
   amount: 1
+  autoMessage: 0
 --- !u!114 &114919751080390652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2352,7 +2266,7 @@ MonoBehaviour:
         node: {fileID: -2281139015527259655}
         reroutePoints: []
       - fieldName: output
-        node: {fileID: -2630337212515068166}
+        node: {fileID: -5468083236913659665}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

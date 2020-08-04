@@ -5,6 +5,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public StoryGraph graph;
+
+    public string sceneID;
     
     [Header("Sprites")]
     public bool willFace;
@@ -23,8 +25,6 @@ public class Interactable : MonoBehaviour
 
     public void Interact ()
     {
-        
-        
         graph.StartEvent(this);
     }
 

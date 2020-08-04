@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Panel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetVarFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TilesSwapManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Start.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,17 +27,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/RemoveFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SaveNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckVarFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/UpdateID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/External/xNode-master/Scripts/Editor/NodeEditorGUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/GiveItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/TakeItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Sound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/HoeItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/CropItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Editor/StartEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,19 +61,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/TakeItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/RemoveFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CropManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/MovePlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/InventoryNotifier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_SOR.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Speech.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/OceanNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/Fade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/HasCrop.cs" />
@@ -82,9 +84,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleGizmo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetTileSwap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TileSwapEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TilesSwapManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/GiveItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/CheckVarFlag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetVarFlag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Graph/Nodes/SetFlag.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +141,9 @@
       <workItem from="1587345199905" duration="24907000" />
       <workItem from="1587394738363" duration="2107000" />
       <workItem from="1587541002712" duration="13706000" />
-      <workItem from="1587613071107" duration="11993000" />
+      <workItem from="1587613071107" duration="12550000" />
+      <workItem from="1587715809484" duration="3444000" />
+      <workItem from="1588229347262" duration="5952000" />
     </task>
     <servers />
   </component>
@@ -149,6 +160,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="824" y="387" width="752" height="438" key="#Notifications/1920.0.1920.1050/0.0.1920.1050/-1858.0.1858.1080@0.0.1920.1050" timestamp="1587271720130" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1587719703948">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/-1858.0.1858.1080/0.0.1920.1050@0.0.1920.1050" timestamp="1587719703948" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587557423964">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
