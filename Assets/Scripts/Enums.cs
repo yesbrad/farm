@@ -6,11 +6,13 @@
     Z5Roses,
     Z6FindingCherrys,
     Z3TreesFirstTask,
+	Z7TreeSecondTask,
 }
 
 public enum TileSwapIDs
 {
-    Bridge1
+    Bridge1,
+	TreeBlock1
 }
 
 public enum VarIDs 

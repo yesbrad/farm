@@ -1,5 +1,77 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9041707022133656385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048bbde95317d49068d4c962d256ff6f, type: 3}
+  m_Name: Has Item
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 264, y: -40}
+  ports:
+    keys:
+    - hasItem
+    - noItem
+    - input
+    - output
+    values:
+    - _fieldName: hasItem
+      _node: {fileID: -9041707022133656385}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4651874092352417803}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: noItem
+      _node: {fileID: -9041707022133656385}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -2689778203328454891}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -9041707022133656385}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 1212482384906996170}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 1
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9041707022133656385}
+      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  hasItem: {fileID: 0}
+  noItem: {fileID: 0}
+  item: {fileID: 11400000, guid: 817a320932ae3b64da581244f36568ba, type: 2}
+  amount: 1
 --- !u!114 &-7162885338656336183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +85,7 @@ MonoBehaviour:
   m_Name: Set Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 456}
+  position: {x: 840, y: 360}
   ports:
     keys:
     - input
@@ -60,7 +132,7 @@ MonoBehaviour:
   m_Name: Simple Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 296, y: 8}
+  position: {x: 712, y: -88}
   ports:
     keys:
     - input
@@ -71,8 +143,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: 1212482384906996170}
+      - fieldName: noItem
+        node: {fileID: -9041707022133656385}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -90,49 +162,6 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   message: Theres smoldering ash inside..
---- !u!114 &-2005201880380305831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f0b1443075e34d35913d4d32757a389, type: 3}
-  m_Name: Start
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -8, y: 312}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -2005201880380305831}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 1
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -2005201880380305831}
-      _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 4651874092352417803}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  eventIDs: 5
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,13 +177,13 @@ MonoBehaviour:
   nodes:
   - {fileID: 1212482384906996170}
   - {fileID: -2689778203328454891}
-  - {fileID: -2005201880380305831}
   - {fileID: 9101555674530372625}
   - {fileID: -7162885338656336183}
   - {fileID: 1921735246408413842}
   - {fileID: 1889623597329049272}
   - {fileID: 4651874092352417803}
   - {fileID: 8237333222164367829}
+  - {fileID: -9041707022133656385}
 --- !u!114 &1212482384906996170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +218,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2689778203328454891}
+        node: {fileID: -9041707022133656385}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -210,7 +239,7 @@ MonoBehaviour:
   m_Name: Set Tile Swap
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1016, y: 440}
+  position: {x: 1352, y: 344}
   ports:
     keys:
     - input
@@ -258,7 +287,7 @@ MonoBehaviour:
   m_Name: Simple Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1288, y: 456}
+  position: {x: 1624, y: 360}
   ports:
     keys:
     - input
@@ -301,7 +330,7 @@ MonoBehaviour:
   m_Name: Check Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 232, y: 312}
+  position: {x: 568, y: 216}
   ports:
     keys:
     - set
@@ -338,8 +367,8 @@ MonoBehaviour:
       _typeQualifiedName: OceanNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: -2005201880380305831}
+      - fieldName: hasItem
+        node: {fileID: -9041707022133656385}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -373,7 +402,7 @@ MonoBehaviour:
   m_Name: Simple Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 264}
+  position: {x: 840, y: 168}
   ports:
     keys:
     - input
@@ -416,7 +445,7 @@ MonoBehaviour:
   m_Name: Set Var Flag
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 760, y: 520}
+  position: {x: 1096, y: 424}
   ports:
     keys:
     - input

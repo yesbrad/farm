@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 	Vector3 moveDirection;
     public Vector3 faceDirection;
 
-    public Vector3 MoveDirection { get { return moveDirection; }}
+    public Vector3 MoveDirection { get { return moveDirection;}}
 
 	public Animator animator;
 
@@ -80,6 +80,12 @@ public class PlayerController : MonoBehaviour
 		faceDirection = direction.normalized;
 		animator.SetFloat("Horizontal", direction.normalized.x);
 		animator.SetFloat("Vertical", direction.normalized.y);
+	}
+
+	// This method is is only used as DEBUG
+	public void OverrideMovementPosition (Vector3 _position) 
+	{
+		moveDirection = _position;
 	}
 
 	public bool CanMove(Vector3 _direction)

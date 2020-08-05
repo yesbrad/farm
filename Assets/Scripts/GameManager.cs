@@ -43,8 +43,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool isTest;
     internal bool hasAllCrops;
     [SerializeField] private EventIDs testID;
-    
-    private GameState currentState;
+	[SerializeField] private Transform debugTreeTransform;
+
+	private GameState currentState;
 
     public GameState CurrentState { get { return currentState; }}
 
@@ -96,6 +97,16 @@ public class GameManager : MonoBehaviour
                 hasAllCrops = !hasAllCrops;
                 UI_HUD.instance.UpdateAllCropsText(hasAllCrops);
             }
+
+			if(Input.GetKeyDown(KeyCode.Alpha1))
+			{
+				if(debugTreeTransform)
+				{
+					Vector3 newPos = (debugTreeTransform.position);
+					PlayerController.instance.transform.position = newPos;
+					PlayerController.instance.OverrideMovementPosition(newPos);
+				}
+			}
         }
     }
 
